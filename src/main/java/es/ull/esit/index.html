@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_61b54a3a52c34a9cba28dbee9c70e69f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_61b54a3a52c34a9cba28dbee9c70e69f" ></div>
+        
+</body>
+<script>    
+    
+            var map_61b54a3a52c34a9cba28dbee9c70e69f = L.map(
+                "map_61b54a3a52c34a9cba28dbee9c70e69f",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_05e1ce65d5ee473898ca47e55067f0ac = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+            var marker_d7831680222240aeb84c95f8c29783bc = L.marker(
+                [15.612054660980206, 84.82896753522385],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_9c9913d4dcbb486a9c93e8085e871568 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca4f1a775b42482eb89a64eaac6d8ef9 = $(`<div id="html_ca4f1a775b42482eb89a64eaac6d8ef9" style="width: 100.0%; height: 100.0%;">CruiseShip</div>`)[0];
+            popup_9c9913d4dcbb486a9c93e8085e871568.setContent(html_ca4f1a775b42482eb89a64eaac6d8ef9);
+        
+
+        marker_d7831680222240aeb84c95f8c29783bc.bindPopup(popup_9c9913d4dcbb486a9c93e8085e871568)
+        ;
+
+        
+    
+    
+            var marker_753a03e2ad5c46a19607a9cdf4a3f417 = L.marker(
+                [-32.8231440072358, 98.84690666264214],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_8cba86fb1854418483a2878f6ab726a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd200dafa9a4409d9734f0293a370d0a = $(`<div id="html_cd200dafa9a4409d9734f0293a370d0a" style="width: 100.0%; height: 100.0%;">CruiseShip</div>`)[0];
+            popup_8cba86fb1854418483a2878f6ab726a4.setContent(html_cd200dafa9a4409d9734f0293a370d0a);
+        
+
+        marker_753a03e2ad5c46a19607a9cdf4a3f417.bindPopup(popup_8cba86fb1854418483a2878f6ab726a4)
+        ;
+
+        
+    
+    
+            var marker_f320678f969a4f5db2a309c6b3eb6693 = L.marker(
+                [28.793676366650292, 158.42018879799429],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_df7cedbbe43a4981ab3de7b8525ab825 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1f91f59147a4b53a48c22fafa44b88e = $(`<div id="html_a1f91f59147a4b53a48c22fafa44b88e" style="width: 100.0%; height: 100.0%;">CruiseShip</div>`)[0];
+            popup_df7cedbbe43a4981ab3de7b8525ab825.setContent(html_a1f91f59147a4b53a48c22fafa44b88e);
+        
+
+        marker_f320678f969a4f5db2a309c6b3eb6693.bindPopup(popup_df7cedbbe43a4981ab3de7b8525ab825)
+        ;
+
+        
+    
+    
+            var marker_108315a40ea8462d980da5cdb588c169 = L.marker(
+                [-49.764331939558964, -164.0854732642528],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_a198a2e5db5b4cfa92d0ef33f9eb0ea5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_07223b026d6d462d9b5287d64215f5f9 = $(`<div id="html_07223b026d6d462d9b5287d64215f5f9" style="width: 100.0%; height: 100.0%;">CruiseShip</div>`)[0];
+            popup_a198a2e5db5b4cfa92d0ef33f9eb0ea5.setContent(html_07223b026d6d462d9b5287d64215f5f9);
+        
+
+        marker_108315a40ea8462d980da5cdb588c169.bindPopup(popup_a198a2e5db5b4cfa92d0ef33f9eb0ea5)
+        ;
+
+        
+    
+    
+            var marker_d8218c3eb13445ffa87a156121802d00 = L.marker(
+                [84.21472527080084, 170.3409795921266],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_bd746122405c4d9daa43665904821b31 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4fc5ba0508af41b8a1d94047bcde7eb8 = $(`<div id="html_4fc5ba0508af41b8a1d94047bcde7eb8" style="width: 100.0%; height: 100.0%;">CruiseShip</div>`)[0];
+            popup_bd746122405c4d9daa43665904821b31.setContent(html_4fc5ba0508af41b8a1d94047bcde7eb8);
+        
+
+        marker_d8218c3eb13445ffa87a156121802d00.bindPopup(popup_bd746122405c4d9daa43665904821b31)
+        ;
+
+        
+    
+    
+            var marker_b98cc92743da475895b250fc8c9fb00d = L.marker(
+                [-40.08037760648252, 81.42492205373419],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_275779d329754d8eb503c5fbcf0a6ddb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c4260c683394eefb928d46d0ab346fd = $(`<div id="html_1c4260c683394eefb928d46d0ab346fd" style="width: 100.0%; height: 100.0%;">Freighter</div>`)[0];
+            popup_275779d329754d8eb503c5fbcf0a6ddb.setContent(html_1c4260c683394eefb928d46d0ab346fd);
+        
+
+        marker_b98cc92743da475895b250fc8c9fb00d.bindPopup(popup_275779d329754d8eb503c5fbcf0a6ddb)
+        ;
+
+        
+    
+    
+            var marker_ec84cca2d0c9485ea86253e92dbb98e5 = L.marker(
+                [-77.49667389604045, 46.58206286861733],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_2f304f47a0e3424e8531a71c7a8d79f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e35911833154e8fb39d430dbf5d31c7 = $(`<div id="html_8e35911833154e8fb39d430dbf5d31c7" style="width: 100.0%; height: 100.0%;">Freighter</div>`)[0];
+            popup_2f304f47a0e3424e8531a71c7a8d79f0.setContent(html_8e35911833154e8fb39d430dbf5d31c7);
+        
+
+        marker_ec84cca2d0c9485ea86253e92dbb98e5.bindPopup(popup_2f304f47a0e3424e8531a71c7a8d79f0)
+        ;
+
+        
+    
+    
+            var marker_ead05d0dc6844d1380ba3b52c84d602b = L.marker(
+                [-11.875305564566405, 136.63343511916366],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_5ea39950d24d49e6ad5e21fad4e03b6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0b243a46330407796b0bab710fe5ae2 = $(`<div id="html_b0b243a46330407796b0bab710fe5ae2" style="width: 100.0%; height: 100.0%;">Freighter</div>`)[0];
+            popup_5ea39950d24d49e6ad5e21fad4e03b6e.setContent(html_b0b243a46330407796b0bab710fe5ae2);
+        
+
+        marker_ead05d0dc6844d1380ba3b52c84d602b.bindPopup(popup_5ea39950d24d49e6ad5e21fad4e03b6e)
+        ;
+
+        
+    
+    
+            var marker_05af0b3ab81c47c494a5e9d73f38b643 = L.marker(
+                [20.576321448320538, 179.16527347515716],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_9906b2c88ef4436fa7969ca44ab5c5c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b1efdb12cf2c4a19969e207f40eaa1a2 = $(`<div id="html_b1efdb12cf2c4a19969e207f40eaa1a2" style="width: 100.0%; height: 100.0%;">Freighter</div>`)[0];
+            popup_9906b2c88ef4436fa7969ca44ab5c5c5.setContent(html_b1efdb12cf2c4a19969e207f40eaa1a2);
+        
+
+        marker_05af0b3ab81c47c494a5e9d73f38b643.bindPopup(popup_9906b2c88ef4436fa7969ca44ab5c5c5)
+        ;
+
+        
+    
+    
+            var marker_a3d40e0c44a24f6d804d29dc580ff05c = L.marker(
+                [-33.52071110336409, 177.5313098238574],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_f68934fcdce249d9ae50783e58c325a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a6537047a6264fca894d1d862b1bcb6e = $(`<div id="html_a6537047a6264fca894d1d862b1bcb6e" style="width: 100.0%; height: 100.0%;">Freighter</div>`)[0];
+            popup_f68934fcdce249d9ae50783e58c325a4.setContent(html_a6537047a6264fca894d1d862b1bcb6e);
+        
+
+        marker_a3d40e0c44a24f6d804d29dc580ff05c.bindPopup(popup_f68934fcdce249d9ae50783e58c325a4)
+        ;
+
+        
+    
+    
+            var marker_33672ef9879b44a4bd3f1c82e68cc937 = L.marker(
+                [56.04842242727372, 134.26953874494598],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_89f18d24b1434d0f867ccc7d98b7359d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6220976db3514725b617a175ac2c240b = $(`<div id="html_6220976db3514725b617a175ac2c240b" style="width: 100.0%; height: 100.0%;">OilTanker</div>`)[0];
+            popup_89f18d24b1434d0f867ccc7d98b7359d.setContent(html_6220976db3514725b617a175ac2c240b);
+        
+
+        marker_33672ef9879b44a4bd3f1c82e68cc937.bindPopup(popup_89f18d24b1434d0f867ccc7d98b7359d)
+        ;
+
+        
+    
+    
+            var marker_2db576b0c7f441aea8eff8c3b4f0621c = L.marker(
+                [77.89098538492897, -73.54954295281972],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_5005e7a071da4dea97c3d794c85bedf1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_98ee2ae182e84c27a1c08c2492121e81 = $(`<div id="html_98ee2ae182e84c27a1c08c2492121e81" style="width: 100.0%; height: 100.0%;">OilTanker</div>`)[0];
+            popup_5005e7a071da4dea97c3d794c85bedf1.setContent(html_98ee2ae182e84c27a1c08c2492121e81);
+        
+
+        marker_2db576b0c7f441aea8eff8c3b4f0621c.bindPopup(popup_5005e7a071da4dea97c3d794c85bedf1)
+        ;
+
+        
+    
+    
+            var marker_6ebc4675d1124437935045ed5c3d3b1a = L.marker(
+                [54.373715841302904, 4.104352963278444],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_01d8f37377714687a473c99fd86c2c0c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e278f399eef4c918fe282ee3aec869c = $(`<div id="html_6e278f399eef4c918fe282ee3aec869c" style="width: 100.0%; height: 100.0%;">OilTanker</div>`)[0];
+            popup_01d8f37377714687a473c99fd86c2c0c.setContent(html_6e278f399eef4c918fe282ee3aec869c);
+        
+
+        marker_6ebc4675d1124437935045ed5c3d3b1a.bindPopup(popup_01d8f37377714687a473c99fd86c2c0c)
+        ;
+
+        
+    
+    
+            var marker_559cb2f7ad2048d6be31d1d4d1b9a5e6 = L.marker(
+                [1.7659343635772444, -1.0698058136146358],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_edc808cdf21f4b14b33a43a769a65f0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_80c5bc198f664802a5b36e9ec463018b = $(`<div id="html_80c5bc198f664802a5b36e9ec463018b" style="width: 100.0%; height: 100.0%;">OilTanker</div>`)[0];
+            popup_edc808cdf21f4b14b33a43a769a65f0e.setContent(html_80c5bc198f664802a5b36e9ec463018b);
+        
+
+        marker_559cb2f7ad2048d6be31d1d4d1b9a5e6.bindPopup(popup_edc808cdf21f4b14b33a43a769a65f0e)
+        ;
+
+        
+    
+    
+            var marker_d1ff8cbb20ff42cdb4f735f52be18173 = L.marker(
+                [-17.559070609559978, -82.86825272196592],
+                {}
+            ).addTo(map_61b54a3a52c34a9cba28dbee9c70e69f);
+        
+    
+        var popup_7d62f6706a5e4288a6d1e8a14c404ec0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_278c03b43bde4ee4a71f618c5b0d4dcd = $(`<div id="html_278c03b43bde4ee4a71f618c5b0d4dcd" style="width: 100.0%; height: 100.0%;">OilTanker</div>`)[0];
+            popup_7d62f6706a5e4288a6d1e8a14c404ec0.setContent(html_278c03b43bde4ee4a71f618c5b0d4dcd);
+        
+
+        marker_d1ff8cbb20ff42cdb4f735f52be18173.bindPopup(popup_7d62f6706a5e4288a6d1e8a14c404ec0)
+        ;
+
+        
+    
+</script>
