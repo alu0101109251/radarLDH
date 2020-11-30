@@ -43,11 +43,5 @@ public class RadarMain {
     public static void main(String[] args) {
         RadarMain radarMain = new RadarMain();
         CsvGenerator.generateCsvFile("./src/main/java/es/ull/esit/utilities/transports.csv", radarMain.getTransports());
-        Runtime rt = Runtime.getRuntime();
-        try {
-            Process pr = rt.exec("pipenv run python ./src/main/java/es/ull/esit/MapVisualizer.py");
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
     }
 }
