@@ -7,7 +7,6 @@ import es.ull.esit.factories.TransportFactory;
 import es.ull.esit.products.Transport;
 import es.ull.esit.utilities.CsvGenerator;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class RadarMain {
