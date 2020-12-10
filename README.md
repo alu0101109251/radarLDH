@@ -1,16 +1,19 @@
 
 <!-- SHIELDS -->
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH)
+
 ![GitHub](https://img.shields.io/github/license/alu0101109251/radarLDH)
 ![GitHub repo size](https://img.shields.io/github/repo-size/alu0101109251/radarLDH)
 
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://ull.es">
-    <img src="https://pbs.twimg.com/profile_images/1265935346669367299/P-NSHhQv_400x400.jpg" alt="Logo" height="200" width="200">
-  </a>
-</p>
-
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=alu0101109251_radarLDH&metric=bugs)](https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=alu0101109251_radarLDH&metric=code_smells)](https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=alu0101109251_radarLDH&metric=coverage)](https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=alu0101109251_radarLDH&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=alu0101109251_radarLDH&metric=ncloc)](https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=alu0101109251_radarLDH&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alu0101109251_radarLDH&metric=alert_status)](https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=alu0101109251_radarLDH&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=alu0101109251_radarLDH&metric=security_rating)](https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH)
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -83,9 +86,9 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/alu0101109251/radarLDH.git
    ```
-2. Install Pipfile packages
+2. 
    ```sh
-   pipenv install
+   
    ```
 
 
@@ -121,7 +124,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Javier Alonso Delgado - [alu0101109251](https://github.com/alu0101109251) - alu0101109251@ull.edu.es
+* Javier Alonso Delgado - [alu0101109251](https://github.com/alu0101109251) - alu0101109251@ull.edu.es
 
 Project Link: [https://github.com/alu0101109251/radarLDH](https://github.com/alu0101109251/radarLDH)
 
