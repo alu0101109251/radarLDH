@@ -23,6 +23,13 @@
         <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>extdeps</id>
+            <url>https://dl.bintray.com/gregor-laemmel/maven</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -42,12 +49,10 @@
             <version>3.3.6</version>
         </dependency>
         <dependency>
-            <groupId>unfolding</groupId>
+            <groupId>de.fhpotsdam</groupId>
             <artifactId>unfolding</artifactId>
-            <version>0.9.7</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/unfolding.0.9.6.jar</systemPath>
-            <type>jar</type>
+            <version>0.9.6</version>
+            <type>pom</type>
         </dependency>
     </dependencies>
 
