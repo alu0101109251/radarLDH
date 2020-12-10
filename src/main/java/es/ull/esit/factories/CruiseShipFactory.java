@@ -1,8 +1,7 @@
 package es.ull.esit.factories;
 
-import es.ull.esit.products.CruiseShip;
-import es.ull.esit.products.OilTanker;
-import es.ull.esit.products.Transport;
+import es.ull.esit.transports.CruiseShip;
+import es.ull.esit.transports.Transport;
 
 public class CruiseShipFactory implements TransportFactory {
     @Override

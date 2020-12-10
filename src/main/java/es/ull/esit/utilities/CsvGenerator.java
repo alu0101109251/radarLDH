@@ -1,6 +1,6 @@
 package es.ull.esit.utilities;
 
-import es.ull.esit.products.Transport;
+import es.ull.esit.transports.Transport;
 
 import java.io.FileWriter;
 import java.io.IOException;

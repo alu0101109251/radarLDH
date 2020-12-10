@@ -1,7 +1,7 @@
 package es.ull.esit.factories;
 
-import es.ull.esit.products.Freighter;
-import es.ull.esit.products.Transport;
+import es.ull.esit.transports.Freighter;
+import es.ull.esit.transports.Transport;
 
 public class FreighterFactory implements TransportFactory {
 

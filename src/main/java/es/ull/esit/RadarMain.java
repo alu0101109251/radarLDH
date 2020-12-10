@@ -4,7 +4,7 @@ import es.ull.esit.factories.CruiseShipFactory;
 import es.ull.esit.factories.FreighterFactory;
 import es.ull.esit.factories.OilTankerFactory;
 import es.ull.esit.factories.TransportFactory;
-import es.ull.esit.products.Transport;
+import es.ull.esit.transports.Transport;
 import es.ull.esit.utilities.CsvGenerator;
 
 import java.util.ArrayList;

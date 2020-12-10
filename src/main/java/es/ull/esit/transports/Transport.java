@@ -1,4 +1,4 @@
-package es.ull.esit.products;
+package es.ull.esit.transports;
 
 public abstract class Transport {
     protected String type;

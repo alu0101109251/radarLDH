@@ -1,4 +1,4 @@
-package es.ull.esit.products;
+package es.ull.esit.transports;
 
 public class OilTanker extends Transport {
 
