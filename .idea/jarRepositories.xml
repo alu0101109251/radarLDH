@@ -16,5 +16,10 @@
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="extdeps" />
+      <option name="name" value="extdeps" />
+      <option name="url" value="https://dl.bintray.com/gregor-laemmel/maven" />
+    </remote-repository>
   </component>
 </project>
