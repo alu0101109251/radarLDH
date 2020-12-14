@@ -5,6 +5,15 @@ language: java
 jdk:
   - openjdk11
 
+# GitHub Pages Deployment
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: main
+
 addons:
   sonarcloud:
     organization: "alu0101109251"
