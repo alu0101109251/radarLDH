@@ -1,4 +1,5 @@
 <!-- SHIELDS -->
+[![Travis CI]](https://travis-ci.org/images/logos/TravisCI-Mascot-1.png)](https://travis-ci.com/github/alu0101109251/radarLDH)
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH)
 
 [![Build Status](https://travis-ci.com/alu0101109251/radarLDH.svg?branch=main)](https://travis-ci.com/alu0101109251/radarLDH)
