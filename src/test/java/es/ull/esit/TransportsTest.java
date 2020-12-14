@@ -30,7 +30,7 @@ public class TransportsTest {
         cruise.setCoordinates(28.453323, -16.029710);
 
         assertAll("Verify all attributes are set correctly",
-                () -> assertEquals("Cruise", cruise.getType(), "Transport Type"),
+                () -> assertEquals("CruiseShip", cruise.getType(), "Transport Type"),
                 () -> assertEquals(28.453323, cruise.getLatitude(), "Transport Latitude"),
                 () -> assertEquals(-16.029710, cruise.getLongitude(), "Transport Longitude")
         );
