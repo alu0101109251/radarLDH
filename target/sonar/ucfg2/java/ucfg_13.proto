@@ -1,0 +1,27 @@
+
+Zes.ull.esit.factories.FreighterFactory#createTransport()Les/ull/esit/transports/Transport;m
+c/home/travis/build/alu0101109251/radarLDH/src/main/java/es/ull/esit/factories/FreighterFactory.java	 	($"1*ž
+1m
+c/home/travis/build/alu0101109251/radarLDH/src/main/java/es/ull/esit/factories/FreighterFactory.java
+ 
+(¼¹
+m
+c/home/travis/build/alu0101109251/radarLDH/src/main/java/es/ull/esit/factories/FreighterFactory.java
+ 
+(&
+%0 es.ull.esit.transports.Freighter" es.ull.esit.transports.FreighterÎ
+Ë
+m
+c/home/travis/build/alu0101109251/radarLDH/src/main/java/es/ull/esit/factories/FreighterFactory.java
+ 
+(
+%1"*es.ull.esit.transports.Freighter#<init>()V*(
+&
+%0 es.ull.esit.transports.Freighter"™
+m
+c/home/travis/build/alu0101109251/radarLDH/src/main/java/es/ull/esit/factories/FreighterFactory.java
+ 
+((
+&
+%0 es.ull.esit.transports.FreighterB*(
+&es.ull.esit.factories.FreighterFactory

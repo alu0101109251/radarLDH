@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+radarLDH,es.ull.esit,RadarMain,69,0,2,0,17,0,5,0,4,0
+radarLDH,es.ull.esit.maps,Map,3,0,0,0,1,0,1,0,1,0
+radarLDH,es.ull.esit.utilities,CsvGenerator,83,0,2,0,22,0,3,0,2,0
+radarLDH,es.ull.esit.transports,Transport,19,0,0,0,7,0,5,0,5,0
+radarLDH,es.ull.esit.transports,Freighter,6,0,0,0,3,0,1,0,1,0
+radarLDH,es.ull.esit.transports,CruiseShip,6,0,0,0,3,0,1,0,1,0
+radarLDH,es.ull.esit.transports,OilTanker,6,0,0,0,3,0,1,0,1,0
+radarLDH,es.ull.esit.factories,CruiseShipFactory,7,0,0,0,2,0,2,0,2,0
+radarLDH,es.ull.esit.factories,FreighterFactory,7,0,0,0,2,0,2,0,2,0
+radarLDH,es.ull.esit.factories,OilTankerFactory,7,0,0,0,2,0,2,0,2,0

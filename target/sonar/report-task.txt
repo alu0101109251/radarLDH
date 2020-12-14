@@ -1,0 +1,7 @@
+organization=alu0101109251
+projectKey=alu0101109251_radarLDH
+serverUrl=https://sonarcloud.io
+serverVersion=8.5.0.37579
+dashboardUrl=https://sonarcloud.io/dashboard?id=alu0101109251_radarLDH
+ceTaskId=AXZhkSqdiPddx8-Dr1r9
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXZhkSqdiPddx8-Dr1r9
