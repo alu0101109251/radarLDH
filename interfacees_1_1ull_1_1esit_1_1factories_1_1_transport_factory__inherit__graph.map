@@ -1,0 +1,5 @@
+<map id="es.ull.esit.factories.TransportFactory" name="es.ull.esit.factories.TransportFactory">
+<area shape="rect" id="node2" href="$classes_1_1ull_1_1esit_1_1factories_1_1_cruise_ship_factory.html" title="{es.ull.esit.factories.Cruise\lShipFactory\n||+ createTransport()\l}" alt="" coords="5,145,180,237"/>
+<area shape="rect" id="node3" href="$classes_1_1ull_1_1esit_1_1factories_1_1_freighter_factory.html" title="{es.ull.esit.factories.Freighter\lFactory\n||+ createTransport()\l}" alt="" coords="205,145,391,237"/>
+<area shape="rect" id="node4" href="$classes_1_1ull_1_1esit_1_1factories_1_1_oil_tanker_factory.html" title="{es.ull.esit.factories.Oil\lTankerFactory\n||+ createTransport()\l}" alt="" coords="415,145,567,237"/>
+</map>
