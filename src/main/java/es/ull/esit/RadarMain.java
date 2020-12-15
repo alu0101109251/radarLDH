@@ -24,8 +24,10 @@ public class RadarMain {
         return transports;
     }
 
-    // TODO :
-    // https://stackoverflow.com/questions/25264684/how-to-generate-random-latitude-and-longitude-in-a-city-using-java
+    // TODO:
+    // 1. Extract random ocean coordinate
+    // 2. Generate straight line
+    // 3. Update position and display in map
 
     private void generateRandomTransports(TransportFactory factory) {
         for(int i = 0; i < N_TRANSPORTS; i++) {
