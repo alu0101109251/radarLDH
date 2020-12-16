@@ -70,7 +70,7 @@ public abstract class Transport {
     /**
      * @brief startLocation setter
      * @param latitude -> first latitude location
-     * @param longitude -> lastt longitude location
+     * @param longitude -> current longitude location
      */
     public void setStartLocation(double latitude, double longitude) {
         this.startLocation = new Point2D.Double(latitude, longitude);
@@ -110,6 +110,19 @@ public abstract class Transport {
         float m = (float) (yF - yI) / (float) (xF - xI);
         float c = yI - m*xI;
 
+        assignLine(xI, yI, xF, yF, m, c);
+    }
+
+    /**
+     * @brief Method capable to assign a straight line points
+     * @param xI -> int value of x-coordinate
+     * @param yI -> int value of y-coordinate
+     * @param xF -> float value of x-coordinate
+     * @param yF -> float value of y-coordinate
+     * @param m  -> float value from slope of the line
+     * @param c  -> ??????????????????????????????????
+     */
+    private void assignLine(int xI, int yI, int xF, int yF, float m, float c) {
         // Determine dependent variable
         int xDelta = Math.abs(xF - xI);
         int yDelta = Math.abs(yF - yI);
@@ -134,3 +147,4 @@ public abstract class Transport {
         path.add(endLocation);
     }
 }
+
