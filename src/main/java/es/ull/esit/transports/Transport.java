@@ -37,7 +37,7 @@ public abstract class Transport {
      * @brief Storages in an essential 2D coordinates set, due to,
      * all the points of path will be included here.
      */
-    protected ArrayList<Point2D> path;
+    protected ArrayList<Point2D> path = new ArrayList<>();
     /**
      * @brief Index to surf on the attribute path_
      * all the points of path will be included here.
