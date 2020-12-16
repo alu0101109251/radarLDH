@@ -43,8 +43,6 @@ public abstract class Transport {
      * all the points of path will be included here.
      */
     protected int currentPathIndex;
-
-
     /**
      * @brief Type Getter
      * @return String -> transport type
