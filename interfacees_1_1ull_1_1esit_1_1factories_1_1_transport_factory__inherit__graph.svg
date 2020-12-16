@@ -21,7 +21,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="classes_1_1ull_1_1esit_1_1factories_1_1_cruise_ship_factory.html" target="_top" xlink:title="{es.ull.esit.factories.Cruise\lShipFactory\n||+ createTransport()\l}">
+<g id="a_node2"><a xlink:href="classes_1_1ull_1_1esit_1_1factories_1_1_cruise_ship_factory.html" target="_top" xlink:title="A concrete factory, which function is generate an CruiseShip. ">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-68.5 131,-68.5 131,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">es.ull.esit.factories.Cruise</text>
 <text text-anchor="middle" x="65.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShipFactory</text>
