@@ -63,8 +63,9 @@ public class GeoMap extends PApplet {
         map.draw();
     }
 
+    // TODO: extract initial and final point from json
     private void generateRandomTransports(TransportFactory factory) {
-        for(int i = 0; i < N_TRANSPORTS; i++) {
+        /*for(int i = 0; i < N_TRANSPORTS; i++) {
             Point2D coordinates = Water.getOceanCoordinates();
 
             assert coordinates != null;
@@ -72,11 +73,11 @@ public class GeoMap extends PApplet {
             double latitude = coordinates.getX();
             double longitude = coordinates.getY();
 
-            Transport t = factory.createTransport();
+            Transport t = factory.createTransport(, );
             t.setCoordinates(latitude, longitude);
 
             transports.add(t);
-        }
+        }*/
     }
 
     public static void main(String[] args) {

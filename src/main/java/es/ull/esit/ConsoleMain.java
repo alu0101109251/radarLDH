@@ -26,22 +26,23 @@ public class ConsoleMain {
         return transports;
     }
 
+    // TODO: extract initial and final point from json
     private void generateRandomTransports(TransportFactory factory) {
-        for(int i = 0; i < N_TRANSPORTS; i++) {
-            //double latitude = (Math.random() * 180.0) - 90.0;
-            //double longitude = (Math.random() * 360.0) - 180.0;
+        /*for(int i = 0; i < N_TRANSPORTS; i++) {
+            double latitude = (Math.random() * 180.0) - 90.0;
+            double longitude = (Math.random() * 360.0) - 180.0;
 
             Point2D coordinates = Water.getOceanCoordinates();
             assert coordinates != null;
             double latitude = coordinates.getX();
             double longitude = coordinates.getY();
 
-            Transport t = factory.createTransport();
+            Transport t = factory.createTransport(, );
 
             t.setCoordinates(latitude, longitude);
 
             transports.add(t);
-        }
+        }*/
     }
 
     public static void main(String[] args) {

@@ -2,6 +2,8 @@ package es.ull.esit.factories;
 
 import es.ull.esit.transports.Transport;
 
+import java.awt.geom.Point2D;
+
 /**
  *
  * @class TransportFactory

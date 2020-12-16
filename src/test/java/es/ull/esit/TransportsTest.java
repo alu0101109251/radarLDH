@@ -4,11 +4,8 @@ import es.ull.esit.factories.CruiseShipFactory;
 import es.ull.esit.factories.TransportFactory;
 import es.ull.esit.transports.Transport;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -24,10 +21,10 @@ public class TransportsTest {
 
     @Test
     @DisplayName("Class Getters")
-    void testFlightGetters() {
+    void testTransportGetters() {
         TransportFactory factory = new CruiseShipFactory();
         Transport cruise = factory.createTransport();
-        cruise.setCoordinates(28.453323, -16.029710);
+        cruise.setCurrentLocation(28.453323, -16.029710);
 
         assertAll("Verify all attributes are set correctly",
                 () -> assertEquals("CruiseShip", cruise.getType(), "Transport Type"),
