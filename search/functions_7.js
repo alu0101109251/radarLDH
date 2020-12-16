@@ -5,6 +5,5 @@ var searchData=
   ['setmarkers',['setMarkers',['../classes_1_1ull_1_1esit_1_1_geo_map.html#af9ad00710de96990ba507c9842e420bb',1,'es::ull::esit::GeoMap']]],
   ['setpath',['setPath',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#a2fa4a5397ec319eb74198a30a9ef8784',1,'es::ull::esit::transports::Transport']]],
   ['setstartlocation',['setStartLocation',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#ab438a1289e23a4b9c18213eb930e0e20',1,'es::ull::esit::transports::Transport']]],
-  ['setup',['setup',['../classes_1_1ull_1_1esit_1_1_geo_map.html#af1bc673f3a10c304646aacb6fb3ca82f',1,'es::ull::esit::GeoMap']]],
-  ['startlocation',['startLocation',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#a193a20ee56fc526dd8e9ccb86af97479',1,'es::ull::esit::transports::Transport']]]
+  ['setup',['setup',['../classes_1_1ull_1_1esit_1_1_geo_map.html#af1bc673f3a10c304646aacb6fb3ca82f',1,'es::ull::esit::GeoMap']]]
 ];

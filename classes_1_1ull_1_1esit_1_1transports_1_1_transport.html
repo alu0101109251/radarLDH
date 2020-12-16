@@ -92,6 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classes_1_1ull_1_1esit_1_1transports_1_1_transport-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">es.ull.esit.transports.Transport Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -103,13 +104,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="dynheader">
 Inheritance diagram for es.ull.esit.transports.Transport:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classes_1_1ull_1_1esit_1_1transports_1_1_transport__inherit__graph.svg" width="622" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classes_1_1ull_1_1esit_1_1transports_1_1_transport__inherit__graph.svg" width="622" height="419"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Collaboration diagram for es.ull.esit.transports.Transport:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classes_1_1ull_1_1esit_1_1transports_1_1_transport__coll__graph.svg" width="251" height="375"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classes_1_1ull_1_1esit_1_1transports_1_1_transport__coll__graph.svg" width="251" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -158,11 +159,88 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ae185bd6284f7fb3d9a76ab8e3988fd3b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#ae185bd6284f7fb3d9a76ab8e3988fd3b">currentPathIndex</a></td></tr>
 <tr class="memdesc:ae185bd6284f7fb3d9a76ab8e3988fd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index to surf on the attribute path_ all the points of path will be included here.  <a href="#ae185bd6284f7fb3d9a76ab8e3988fd3b">More...</a><br /></td></tr>
 <tr class="separator:ae185bd6284f7fb3d9a76ab8e3988fd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aa130e2c24f1bd3a173dabb350d9a9ed3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#aa130e2c24f1bd3a173dabb350d9a9ed3">assignLine</a> (int xI, int yI, int xF, int yF, float m, float c)</td></tr>
+<tr class="memdesc:aa130e2c24f1bd3a173dabb350d9a9ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method capable to assign a straight line points.  <a href="#aa130e2c24f1bd3a173dabb350d9a9ed3">More...</a><br /></td></tr>
+<tr class="separator:aa130e2c24f1bd3a173dabb350d9a9ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract class to represent a transport. </p>
 <p>This class provides common methods and attributes shared between every transport. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa130e2c24f1bd3a173dabb350d9a9ed3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void es.ull.esit.transports.Transport.assignLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>yI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>yF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method capable to assign a straight line points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xI</td><td>-&gt; int value of x-coordinate </td></tr>
+    <tr><td class="paramname">yI</td><td>-&gt; int value of y-coordinate </td></tr>
+    <tr><td class="paramname">xF</td><td>-&gt; float value of x-coordinate </td></tr>
+    <tr><td class="paramname">yF</td><td>-&gt; float value of y-coordinate </td></tr>
+    <tr><td class="paramname">m</td><td>-&gt; float value from slope of the line </td></tr>
+    <tr><td class="paramname">c</td><td>-&gt; ?????????????????????????????????? </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a7f3a983e9ee0fb372db68f391a572b73"></a>
 <div class="memitem">
 <div class="memproto">
@@ -345,7 +423,7 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">latitude</td><td>-&gt; first latitude location </td></tr>
-    <tr><td class="paramname">longitude</td><td>-&gt; lastt longitude location </td></tr>
+    <tr><td class="paramname">longitude</td><td>-&gt; current longitude location </td></tr>
   </table>
   </dd>
 </dl>
