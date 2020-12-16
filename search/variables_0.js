@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['latitude',['latitude',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#ad243b25fef131245e87354624d650488',1,'es::ull::esit::transports::Transport']]],
-  ['longitude',['longitude',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#a608c6ce2dcfa77d2b1b1af27213fc87e',1,'es::ull::esit::transports::Transport']]]
+  ['currentlocation',['currentLocation',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#a3cd1f707fdc13fa56540ca5871123f90',1,'es::ull::esit::transports::Transport']]],
+  ['currentpathindex',['currentPathIndex',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#ae185bd6284f7fb3d9a76ab8e3988fd3b',1,'es::ull::esit::transports::Transport']]]
 ];
