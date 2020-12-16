@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class Water {
 
-    public static Point2D getOceanCoordinates() {
+    public static Point2D[] getOceanCoordinates() {
         try {
             String pathname = "./src/main/java/es/ull/esit/utilities/ocean.json";
 
@@ -21,10 +21,17 @@ public class Water {
             int index = (int) (Math.random() * coordinates.length() );
             JSONObject randomCoordinate = coordinates.getJSONObject( index );
 
-            double longitude = randomCoordinate.getDouble( "lo" );
-            double latitude = randomCoordinate.getDouble( "la" );
+            double startLatitude = randomCoordinate.getDouble( "la1" );
+            double startLongitude = randomCoordinate.getDouble( "lo1" );
 
-            return new Point2D.Double(latitude, longitude);
+            double endLatitude = randomCoordinate.getDouble( "la2" );
+            double endLongitude = randomCoordinate.getDouble( "lo2" );
+
+            Point2D start = new Point2D.Double(startLatitude, startLongitude);
+            Point2D end = new Point2D.Double(endLatitude, endLongitude);
+
+            return new Point2D[] { start, end };
+
         } catch (IOException e) {
             e.printStackTrace();
         }

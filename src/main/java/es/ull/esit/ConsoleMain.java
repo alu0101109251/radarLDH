@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class ConsoleMain {
 
-    public static final int N_TRANSPORTS = 5;
+    public static final int N_TRANSPORTS = 2;
     private final ArrayList<Transport> transports = new ArrayList<>();
 
     public ConsoleMain() {
@@ -26,23 +26,25 @@ public class ConsoleMain {
         return transports;
     }
 
-    // TODO: extract initial and final point from json
     private void generateRandomTransports(TransportFactory factory) {
-        /*for(int i = 0; i < N_TRANSPORTS; i++) {
+        for(int i = 0; i < N_TRANSPORTS; i++) {
             double latitude = (Math.random() * 180.0) - 90.0;
             double longitude = (Math.random() * 360.0) - 180.0;
 
-            Point2D coordinates = Water.getOceanCoordinates();
+            Point2D[] coordinates = Water.getOceanCoordinates();
+
             assert coordinates != null;
-            double latitude = coordinates.getX();
-            double longitude = coordinates.getY();
+            Point2D startLocation = coordinates[0];
+            Point2D endLocation = coordinates[1];
 
-            Transport t = factory.createTransport(, );
+            Transport t = factory.createTransport();
 
-            t.setCoordinates(latitude, longitude);
+            t.setStartLocation(startLocation.getX(), startLocation.getY());
+            t.setEndLocation(endLocation.getX(), endLocation.getY());
+            t.setPath();
 
             transports.add(t);
-        }*/
+        }
     }
 
     public static void main(String[] args) {

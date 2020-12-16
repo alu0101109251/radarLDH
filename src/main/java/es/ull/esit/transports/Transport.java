@@ -20,7 +20,7 @@ public abstract class Transport {
     protected Point2D endLocation;
     protected Point2D currentLocation;
 
-    protected ArrayList<Point2D> path;
+    protected ArrayList<Point2D> path = new ArrayList<>();
 
     protected int currentPathIndex;
 
