@@ -14,14 +14,34 @@ import java.util.ArrayList;
  */
 
 public abstract class Transport {
-    protected String type;              /**< Transport type. */
-
-    protected Point2D startLocation;    /**< Start location of the transport path. */
+    /**
+     * @brief This atribute represents the kind of the transport
+     */
+    protected String type;
+    /**
+     * @brief Storages in a 2D coordinates about where was created the
+     * transport in the map
+     */
+    protected Point2D startLocation;
+    /**
+     * @brief Storages in a 2D coordinates about where will have arrive
+     * the transport in the map just finishing its path.
+     */
     protected Point2D endLocation;
+    /**
+     * @brief Storages in a 2D coordinates about in what part of the map
+     * is the transport
+     */
     protected Point2D currentLocation;
-
+    /**
+     * @brief Storages in an essential 2D coordinates set, due to,
+     * all the points of path will be included here.
+     */
     protected ArrayList<Point2D> path = new ArrayList<>();
-
+    /**
+     * @brief Index to surf on the attribute path_
+     * all the points of path will be included here.
+     */
     protected int currentPathIndex;
 
 
