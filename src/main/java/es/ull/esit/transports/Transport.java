@@ -44,8 +44,9 @@ public abstract class Transport {
     public Double getLongitude() { return currentLocation.getY(); }
 
     public void move() {
+        currentPathIndex++;
         if(currentPathIndex < path.size()) {
-            currentLocation.setLocation(path.get(currentPathIndex++));
+            currentLocation.setLocation(path.get(currentPathIndex));
         }
     }
 
