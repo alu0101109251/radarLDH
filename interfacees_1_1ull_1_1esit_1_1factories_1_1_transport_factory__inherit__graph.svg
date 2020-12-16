@@ -39,7 +39,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="classes_1_1ull_1_1esit_1_1factories_1_1_freighter_factory.html" target="_top" xlink:title="{es.ull.esit.factories.Freighter\lFactory\n||+ createTransport()\l}">
+<g id="a_node3"><a xlink:href="classes_1_1ull_1_1esit_1_1factories_1_1_freighter_factory.html" target="_top" xlink:title="A concrete factory, which function is generate an Freighter. ">
 <polygon fill="white" stroke="black" points="149.5,-0.5 149.5,-68.5 289.5,-68.5 289.5,-0.5 149.5,-0.5"/>
 <text text-anchor="start" x="157.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">es.ull.esit.factories.Freighter</text>
 <text text-anchor="middle" x="219.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">Factory</text>
