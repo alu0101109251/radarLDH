@@ -67,13 +67,22 @@ public abstract class Transport {
             currentLocation.setLocation(path.get(currentPathIndex));
         }
     }
-
+    /**
+     * @brief startLocation setter
+     * @param latitude -> first latitude location
+     * @param longitude -> lastt longitude location
+     */
     public void setStartLocation(double latitude, double longitude) {
         this.startLocation = new Point2D.Double(latitude, longitude);
         setCurrentLocation(latitude, longitude);
         currentPathIndex = 0;
     }
 
+    /**
+     * @brief endLocation setter
+     * @param latitude -> end latitude location
+     * @param longitude -> end longitude location
+     */
     public void setEndLocation(double latitude, double longitude) {
         this.endLocation = new Point2D.Double(latitude, longitude);
     }
