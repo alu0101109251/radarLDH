@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import java.awt.geom.Point2D;
 import java.io.File;
 import java.io.IOException;
+import java.security.SecureRandom;
 
 /**
  *
@@ -31,7 +32,8 @@ public class WaterCoordinatesGenerator {
             JSONArray coordinates = new JSONArray(fromFile);
 
             // pull random coordinates from the array:
-            int index = (int) (Math.random() * coordinates.length());
+            SecureRandom r = new SecureRandom();
+            int index = r.nextInt(coordinates.length());
             JSONObject randomCoordinate = coordinates.getJSONObject(index);
 
             double startLatitude = randomCoordinate.getDouble("la1");

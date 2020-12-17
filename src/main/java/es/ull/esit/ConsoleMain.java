@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class ConsoleMain {
 
-    public static final int N_TRANSPORTS = 1;
+    public static final int N_TRANSPORTS = 3;
     public static final ArrayList<Transport> transports = new ArrayList<>();
 
     private static void generateRandomTransports(TransportFactory factory) {
