@@ -14,21 +14,21 @@
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-0.5 0.5,-189.5 149.5,-189.5 149.5,-0.5 0.5,-0.5"/>
 <text text-anchor="middle" x="75" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00">es.ull.esit.transports.Transport</text>
 <polyline fill="none" stroke="black" points="0.5,-170.5 149.5,-170.5 "/>
-<text text-anchor="start" x="8.5" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00"># type</text>
-<text text-anchor="start" x="8.5" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00"># currentPathIndex</text>
-<polyline fill="none" stroke="black" points="0.5,-140.5 149.5,-140.5 "/>
-<text text-anchor="start" x="8.5" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getType()</text>
-<text text-anchor="start" x="8.5" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLatitude()</text>
-<text text-anchor="start" x="8.5" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLongitude()</text>
-<text text-anchor="start" x="8.5" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ move()</text>
-<text text-anchor="start" x="8.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ toString()</text>
-<text text-anchor="start" x="8.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ pathSize()</text>
-<text text-anchor="start" x="8.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCurrentPathIndex()</text>
-<text text-anchor="start" x="8.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setStartLocation()</text>
-<text text-anchor="start" x="8.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setEndLocation()</text>
-<text text-anchor="start" x="8.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setCurrentLocation()</text>
-<text text-anchor="start" x="8.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setPath()</text>
-<text text-anchor="start" x="8.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; assignLine()</text>
+<text text-anchor="start" x="8.5" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ N_INCREMENT</text>
+<text text-anchor="start" x="8.5" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00"># type</text>
+<text text-anchor="start" x="8.5" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00"># currentPathIndex</text>
+<polyline fill="none" stroke="black" points="0.5,-129.5 149.5,-129.5 "/>
+<text text-anchor="start" x="8.5" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getType()</text>
+<text text-anchor="start" x="8.5" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLatitude()</text>
+<text text-anchor="start" x="8.5" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLongitude()</text>
+<text text-anchor="start" x="8.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ move()</text>
+<text text-anchor="start" x="8.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ toString()</text>
+<text text-anchor="start" x="8.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ pathSize()</text>
+<text text-anchor="start" x="8.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCurrentPathIndex()</text>
+<text text-anchor="start" x="8.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setStartLocation()</text>
+<text text-anchor="start" x="8.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setEndLocation()</text>
+<text text-anchor="start" x="8.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setCurrentLocation()</text>
+<text text-anchor="start" x="8.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setPath()</text>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
