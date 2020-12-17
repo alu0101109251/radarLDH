@@ -42,6 +42,7 @@ Project development of a maritime tracking application.
 These are the major frameworks which have been used to build the project.
 * [Maven](https://maven.apache.org/)
 * [Unfolding Maps](http://unfoldingmaps.org/)
+* [Doxygen](https://www.doxygen.nl/)
 
 
 <!-- GETTING STARTED -->
@@ -52,11 +53,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* pipenv
-  ```sh
-  $ pip install pipenv
-  ```
+* You will need a Java IDE such as Eclipse or IntelliJ IDEA (recommended) to open the project properly.
+* Maven will be necessary for managing dependencies.
 
 ### Installation
 
@@ -64,15 +62,33 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/alu0101109251/radarLDH.git
    ```
-2. 
+2. Open the project and let Maven download necessary dependencies. You can also run:
    ```sh
-   
+   mvn install
    ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+There are 2 different main program simulations.
+
+1. [ConsoleMain](src/main/java/es/ull/esit/ConsoleMain.java): simulates ships tracking showing output in the console.
+    * Open the Project and run ConsoleMain configuration.
+    * You will start seeing the current location of different types of maritime transports, which is updated automatically.
+    * If you desired more transports per type, just edit ``N_TRANSPORT`` constant.
+    * Output should be as follows:
+        ```shell
+        Transport{type='CruiseShip', currentLocation=Point2D.Double[21.556180975655383, -95.94505098870872]}
+        Transport{type='Freighter', currentLocation=Point2D.Double[34.61287103576895, 141.16457334944732]}
+        Transport{type='OilTanker', currentLocation=Point2D.Double[-2.89591353110801, -34.85555343154154]}
+        ```
+    
+2. [GeoMap](src/main/java/es/ull/esit/GeoMap.java): simulates ship tracking showing output in a geographical map.
+    * Open the Project and run ConsoleMain configuration.
+    * You will start seeing markers for each transport, which are updated automatically.
+    * If you desired more transports per type, just edit ``N_TRANSPORT`` constant.
+    * Output should be as follows:
+      ![GeoMap Demo](resources/demo.PNG)
 
 _For more examples, please refer to the [Documentation](https://alu0101109251.github.io/radarLDH/)_
 
@@ -98,9 +114,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-* Javier Alonso Delgado - [alu0101109251](https://github.com/alu0101109251) - alu0101109251@ull.edu.es
-* Adrián 
-* Joane
+* Javier Alonso Delgado - alu0101109251@ull.edu.es
+* Adrián Ruiz Olivero - alu0101106748@ull.edu.es
+* Joane Mannion Aguirre - alu0101451701@ull.edu.es
 
 Project Link: [https://github.com/alu0101109251/radarLDH](https://github.com/alu0101109251/radarLDH)
 
