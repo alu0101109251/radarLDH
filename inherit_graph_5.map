@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" href="$classes_1_1ull_1_1esit_1_1transports_1_1_transport.html" title="Abstract class to represent a transport. " alt="" coords="5,56,204,83"/>
-<area shape="rect" id="node2" href="$classes_1_1ull_1_1esit_1_1transports_1_1_cruise_ship.html" title="es.ull.esit.transports.CruiseShip" alt="" coords="252,5,460,32"/>
-<area shape="rect" id="node3" href="$classes_1_1ull_1_1esit_1_1transports_1_1_freighter.html" title="es.ull.esit.transports.Freighter" alt="" coords="259,56,453,83"/>
-<area shape="rect" id="node4" href="$classes_1_1ull_1_1esit_1_1transports_1_1_oil_tanker.html" title="es.ull.esit.transports.Oil\lTanker" alt="" coords="276,107,436,149"/>
+<area shape="rect" id="node2" href="$classes_1_1ull_1_1esit_1_1transports_1_1_cruise_ship.html" title="Class to represent a Cruise Ship. " alt="" coords="252,5,460,32"/>
+<area shape="rect" id="node3" href="$classes_1_1ull_1_1esit_1_1transports_1_1_freighter.html" title="Class to represent a Freighter. " alt="" coords="259,56,453,83"/>
+<area shape="rect" id="node4" href="$classes_1_1ull_1_1esit_1_1transports_1_1_oil_tanker.html" title="Class to represent an Oil Tanker. " alt="" coords="276,107,436,149"/>
 </map>

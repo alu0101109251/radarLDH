@@ -97,18 +97,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">es.ull.esit.builder.TransportBuilder Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class to encapsulate the creation of transport objects.  
+ <a href="classes_1_1ull_1_1esit_1_1builder_1_1_transport_builder.html#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for es.ull.esit.builder.TransportBuilder:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classes_1_1ull_1_1esit_1_1builder_1_1_transport_builder__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classes_1_1ull_1_1esit_1_1builder_1_1_transport_builder__coll__graph.svg" width="251" height="574"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad5abe58bb81567db9f6b2563fc140b9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classes_1_1ull_1_1esit_1_1builder_1_1_transport_builder.html#ad5abe58bb81567db9f6b2563fc140b9c">TransportBuilder</a> (<a class="el" href="interfacees_1_1ull_1_1esit_1_1factories_1_1_transport_factory.html">TransportFactory</a> factory)</td></tr>
+<tr class="memdesc:ad5abe58bb81567db9f6b2563fc140b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class Constructor.  <a href="#ad5abe58bb81567db9f6b2563fc140b9c">More...</a><br /></td></tr>
 <tr class="separator:ad5abe58bb81567db9f6b2563fc140b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee90536c9372d137de9503c8ddf66521"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classes_1_1ull_1_1esit_1_1transports_1_1_transport.html">Transport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classes_1_1ull_1_1esit_1_1builder_1_1_transport_builder.html#aee90536c9372d137de9503c8ddf66521">getBuild</a> ()</td></tr>
+<tr class="memdesc:aee90536c9372d137de9503c8ddf66521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Final object getter.  <a href="#aee90536c9372d137de9503c8ddf66521">More...</a><br /></td></tr>
 <tr class="separator:aee90536c9372d137de9503c8ddf66521"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -116,7 +121,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ab0f7c62bec91075c5a884fa885d4c41f"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classes_1_1ull_1_1esit_1_1transports_1_1_transport.html">Transport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classes_1_1ull_1_1esit_1_1builder_1_1_transport_builder.html#ab0f7c62bec91075c5a884fa885d4c41f">transport</a></td></tr>
 <tr class="separator:ab0f7c62bec91075c5a884fa885d4c41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class to encapsulate the creation of transport objects. </p>
+<p>This class receives a TransportFactory and creates the desired transport object. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad5abe58bb81567db9f6b2563fc140b9c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -130,6 +138,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Class Constructor. </p>
+<p>Instantiates a concrete transport using a given factory and calls the necessary setters to build the object. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">factory</td><td>-&gt; concrete transport factory </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -146,6 +162,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Final object getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>Transport -&gt; built transport </dd></dl>
 
 </div>
 </div>
@@ -167,6 +186,7 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Abstract transport to get built. </p>
 
 </div>
 </div>
