@@ -50,16 +50,18 @@ public class ConsoleMain {
     public static void main(String[] args) {
         ConsoleMain consoleMain = new ConsoleMain();
 
+        ArrayList<Transport> transports = consoleMain.getTransports();
+
         // TODO: loop and update transports location
+        for(Transport transportIterator : transports) {
+            transportIterator.move();
+        }
 
         // TESTING simple case
-        ArrayList<Transport> transports = consoleMain.getTransports();
         String fileName = "./src/main/java/es/ull/esit/utilities/transports.csv";
         CsvGenerator.generateCsvFile(fileName, transports);
 
-        for(Transport t : transports) {
-            t.move();
-        }
+
 
         String fileName1 = "./src/main/java/es/ull/esit/utilities/transports1.csv";
         CsvGenerator.generateCsvFile(fileName1, transports);
