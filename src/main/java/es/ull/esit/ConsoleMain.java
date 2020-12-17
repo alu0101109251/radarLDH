@@ -18,8 +18,8 @@ public class ConsoleMain {
 
     public ConsoleMain() {
         generateRandomTransports(new CruiseShipFactory());
-        generateRandomTransports(new FreighterFactory());
-        generateRandomTransports(new OilTankerFactory());
+        //generateRandomTransports(new FreighterFactory());
+        //generateRandomTransports(new OilTankerFactory());
     }
 
     public ArrayList<Transport> getTransports() {
@@ -28,8 +28,6 @@ public class ConsoleMain {
 
     private void generateRandomTransports(TransportFactory factory) {
         for(int i = 0; i < N_TRANSPORTS; i++) {
-            double latitude = (Math.random() * 180.0) - 90.0;
-            double longitude = (Math.random() * 360.0) - 180.0;
 
             Point2D[] coordinates = Water.getOceanCoordinates();
 
@@ -52,18 +50,36 @@ public class ConsoleMain {
 
         ArrayList<Transport> transports = consoleMain.getTransports();
 
-        // TODO: loop and update transports location
-        for(Transport transportIt : transports) {
-            while (transportIt.getCurrentPathIndex() < transportIt.pathSize())
-                transportIt.move();
-        }
-
-        // TESTING simple case
+        // Storing initial coordinates in CSV
         String fileName = "./src/main/java/es/ull/esit/utilities/transports.csv";
         CsvGenerator.generateCsvFile(fileName, transports);
 
+        // TODO: loop and update transports location
 
+        // Printing Initial Location
+        for(Transport t : transports) {
+            System.out.println(t);
+        }
 
+        // Simulating transport tracking
+        try{
+            boolean iterate = true;
+
+            while(iterate) {
+                iterate = false;
+                for(Transport t : transports) {
+                    if(t.move()) iterate = true;
+                    System.out.println(t);
+                }
+                System.out.println('\n');
+                Thread.sleep(3000);
+            }
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Storing final coordinates in CSV
         String fileName1 = "./src/main/java/es/ull/esit/utilities/transports1.csv";
         CsvGenerator.generateCsvFile(fileName1, transports);
     }

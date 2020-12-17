@@ -14,35 +14,16 @@ import java.util.ArrayList;
  */
 
 public abstract class Transport {
-    /**
-     * @brief This atribute represents the kind of the transport
-     */
-    protected String type;
-    /**
-     * @brief Storages in a 2D coordinates about where was created the
-     * transport in the map
-     */
-    protected Point2D startLocation;
-    /**
-     * @brief Storages in a 2D coordinates about where will have arrive
-     * the transport in the map just finishing its path.
-     */
-    protected Point2D endLocation;
-    /**
-     * @brief Storages in a 2D coordinates about in what part of the map
-     * is the transport
-     */
-    protected Point2D currentLocation;
-    /**
-     * @brief Storages in an essential 2D coordinates set, due to,
-     * all the points of path will be included here.
-     */
-    protected ArrayList<Point2D> path = new ArrayList<>();
-    /**
-     * @brief Index to surf on the attribute path_
-     * all the points of path will be included here.
-     */
-    protected int currentPathIndex;
+
+    protected String type;              /**< Concrete transport type. */
+
+    protected Point2D startLocation;    /**< Initial path transport coordinates location. */
+    protected Point2D endLocation;      /**< Final path transport coordinates location. */
+    protected Point2D currentLocation;  /**< Current transport coordinates location. */
+
+    protected ArrayList<Point2D> path = new ArrayList<>();  /**< Point locations which define the transport path. */
+    protected int currentPathIndex;                         /**< Index to surf on the attribute path. */
+
     /**
      * @brief Type Getter
      * @return String -> transport type
@@ -62,14 +43,24 @@ public abstract class Transport {
     public Double getLongitude() { return currentLocation.getY(); }
 
     /**
-     * @brief This method will be able to refresh the position
-     * transport in the map
+     * @brief This method will be able to update the current transport position in the map
+     * @return boolean -> returns true if the transport updated its location, false otherwise.
      */
-    public void move() {
+    public boolean move() {
         currentPathIndex++;
         if(currentPathIndex < path.size()) {
             currentLocation.setLocation(path.get(currentPathIndex));
+            return true;
         }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Transport{" +
+                "type='" + type + '\'' +
+                ", currentLocation=" + currentLocation +
+                '}';
     }
 
     /**
@@ -117,7 +108,11 @@ public abstract class Transport {
         this.currentLocation = new Point2D.Double(latitude, longitude);
     }
 
-
+    /**
+     * @brief Calculates the transport path
+     * @details Given start and end location, this method calculates the straight line equation
+     * between them and store all the points in the path array.
+     */
     public void setPath() {
         path.add(startLocation);
 
@@ -134,10 +129,8 @@ public abstract class Transport {
         assignLine(xI, yI, xF, yF, m, c);
     }
 
-
-
     /**
-     * @brief Method capable to assign a straight line points
+     * @brief Auxiliary method capable to assign a straight line points
      * @param xI -> int value of x-coordinate
      * @param yI -> int value of y-coordinate
      * @param xF -> float value of x-coordinate
@@ -170,4 +163,3 @@ public abstract class Transport {
         path.add(endLocation);
     }
 }
-
