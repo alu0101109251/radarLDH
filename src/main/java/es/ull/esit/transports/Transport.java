@@ -143,7 +143,7 @@ public abstract class Transport {
      * @param xF -> float value of x-coordinate
      * @param yF -> float value of y-coordinate
      * @param m  -> float value from slope of the line
-     * @param c  -> ??????????????????????????????????
+     * @param c  -> float value that represents the interception with y-axys
      */
     private void assignLine(int xI, int yI, int xF, int yF, float m, float c) {
         // Determine dependent variable
