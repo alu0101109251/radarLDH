@@ -68,11 +68,18 @@ public abstract class Transport {
         }
     }
 
-
+    /**
+     * @brief Returns number of path's positions
+     * @return int -> path size
+     */
     public int pathSize() {
         return path.size();
     }
 
+    /**
+     * @brief currentPathIndex Getter
+     * @return int -> currentPathIndex value
+     */
     public int getCurrentPathIndex() {
         return currentPathIndex;
     }
