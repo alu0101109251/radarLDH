@@ -61,12 +61,33 @@ public abstract class Transport {
      */
     public Double getLongitude() { return currentLocation.getY(); }
 
+    /**
+     * @brief This method will be able to refresh the position
+     * transport in the map
+     */
     public void move() {
         currentPathIndex++;
         if(currentPathIndex < path.size()) {
             currentLocation.setLocation(path.get(currentPathIndex));
         }
     }
+
+    /**
+     * @brief Returns number of path's positions
+     * @return int -> path size
+     */
+    public int pathSize() {
+        return path.size();
+    }
+
+    /**
+     * @brief currentPathIndex Getter
+     * @return int -> currentPathIndex value
+     */
+    public int getCurrentPathIndex() {
+        return currentPathIndex;
+    }
+
     /**
      * @brief startLocation setter
      * @param latitude -> first latitude location
@@ -113,6 +134,8 @@ public abstract class Transport {
         assignLine(xI, yI, xF, yF, m, c);
     }
 
+
+
     /**
      * @brief Method capable to assign a straight line points
      * @param xI -> int value of x-coordinate
@@ -120,7 +143,7 @@ public abstract class Transport {
      * @param xF -> float value of x-coordinate
      * @param yF -> float value of y-coordinate
      * @param m  -> float value from slope of the line
-     * @param c  -> ??????????????????????????????????
+     * @param c  -> float value that represents the interception with y-axys
      */
     private void assignLine(int xI, int yI, int xF, int yF, float m, float c) {
         // Determine dependent variable
