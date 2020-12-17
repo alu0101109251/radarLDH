@@ -54,6 +54,7 @@ public class ConsoleMain {
         }
         catch (InterruptedException e) {
             e.printStackTrace();
+            Thread.currentThread().interrupt();
         }
 
         // Storing final coordinates in CSV

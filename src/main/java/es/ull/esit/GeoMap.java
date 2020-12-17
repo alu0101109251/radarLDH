@@ -66,6 +66,7 @@ public class GeoMap extends PApplet {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+            Thread.currentThread().interrupt();
         }
     }
 
