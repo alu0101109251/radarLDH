@@ -8,6 +8,7 @@ import de.fhpotsdam.unfolding.marker.SimplePointMarker;
 import de.fhpotsdam.unfolding.providers.AbstractMapProvider;
 import de.fhpotsdam.unfolding.providers.Microsoft;
 import de.fhpotsdam.unfolding.utils.MapUtils;
+import es.ull.esit.builder.TransportBuilder;
 import es.ull.esit.factories.CruiseShipFactory;
 import es.ull.esit.factories.FreighterFactory;
 import es.ull.esit.factories.OilTankerFactory;
@@ -23,10 +24,6 @@ public class GeoMap extends PApplet {
 
     public static final int N_TRANSPORTS = 5;
     private final ArrayList<Transport> transports = new ArrayList<>();
-
-    // Initializing the height and width of the map
-    private static final int mapWidth = 350;
-    private static final int mapHeight = 500;
 
     private MarkerManager<Marker> markerManager;
     private UnfoldingMap map;
@@ -74,29 +71,12 @@ public class GeoMap extends PApplet {
         }
     }
 
-    public void keyPressed() {
-        if (key == 'a') {
-            markerManager.clearMarkers();
-            updateMarkers();
-        }
-    }
-
     private void generateRandomTransports(TransportFactory factory) {
         for(int i = 0; i < N_TRANSPORTS; i++) {
 
-            Point2D[] coordinates = Water.getOceanCoordinates();
+            TransportBuilder builder = new TransportBuilder(factory);
 
-            assert coordinates != null;
-            Point2D startLocation = coordinates[0];
-            Point2D endLocation = coordinates[1];
-
-            Transport t = factory.createTransport();
-
-            t.setStartLocation(startLocation.getX(), startLocation.getY());
-            t.setEndLocation(endLocation.getX(), endLocation.getY());
-            t.setPath();
-
-            transports.add(t);
+            transports.add(builder.getBuild());
         }
     }
 

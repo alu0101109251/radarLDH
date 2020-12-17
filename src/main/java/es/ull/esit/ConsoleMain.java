@@ -1,14 +1,13 @@
 package es.ull.esit;
 
+import es.ull.esit.builder.TransportBuilder;
 import es.ull.esit.factories.CruiseShipFactory;
 import es.ull.esit.factories.FreighterFactory;
 import es.ull.esit.factories.OilTankerFactory;
 import es.ull.esit.factories.TransportFactory;
 import es.ull.esit.transports.Transport;
 import es.ull.esit.utilities.CsvGenerator;
-import es.ull.esit.utilities.Water;
 
-import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
 public class ConsoleMain {
@@ -29,19 +28,9 @@ public class ConsoleMain {
     private void generateRandomTransports(TransportFactory factory) {
         for(int i = 0; i < N_TRANSPORTS; i++) {
 
-            Point2D[] coordinates = Water.getOceanCoordinates();
+            TransportBuilder builder = new TransportBuilder(factory);
 
-            assert coordinates != null;
-            Point2D startLocation = coordinates[0];
-            Point2D endLocation = coordinates[1];
-
-            Transport t = factory.createTransport();
-
-            t.setStartLocation(startLocation.getX(), startLocation.getY());
-            t.setEndLocation(endLocation.getX(), endLocation.getY());
-            t.setPath();
-
-            transports.add(t);
+            transports.add(builder.getBuild());
         }
     }
 
