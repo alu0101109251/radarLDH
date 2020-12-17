@@ -53,8 +53,9 @@ public class ConsoleMain {
         ArrayList<Transport> transports = consoleMain.getTransports();
 
         // TODO: loop and update transports location
-        for(Transport transportIterator : transports) {
-            transportIterator.move();
+        for(Transport transportIt : transports) {
+            while (transportIt.getCurrentPathIndex() < transportIt.pathSize())
+                transportIt.move();
         }
 
         // TESTING simple case

@@ -67,6 +67,16 @@ public abstract class Transport {
             currentLocation.setLocation(path.get(currentPathIndex));
         }
     }
+
+
+    public int pathSize() {
+        return path.size();
+    }
+
+    public int getCurrentPathIndex() {
+        return currentPathIndex;
+    }
+
     /**
      * @brief startLocation setter
      * @param latitude -> first latitude location
@@ -112,6 +122,8 @@ public abstract class Transport {
 
         assignLine(xI, yI, xF, yF, m, c);
     }
+
+
 
     /**
      * @brief Method capable to assign a straight line points
