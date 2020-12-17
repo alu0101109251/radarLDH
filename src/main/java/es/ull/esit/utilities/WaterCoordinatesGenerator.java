@@ -8,8 +8,21 @@ import java.awt.geom.Point2D;
 import java.io.File;
 import java.io.IOException;
 
-public class Water {
+/**
+ *
+ * @class WaterCoordinatesGenerator
+ * @brief Class to generate random ocean-only coordinates
+ *
+ * @details This class gets random coordinates from a JSON file and returns the start
+ * and destination point.
+ *
+ */
+public class WaterCoordinatesGenerator {
 
+    /**
+     * @brief Random ocean coordinates getter
+     * @return Point2D[] -> array containing [startPoint, endPoint]
+     */
     public static Point2D[] getOceanCoordinates() {
         try {
             String pathname = "./src/main/java/es/ull/esit/utilities/ocean.json";

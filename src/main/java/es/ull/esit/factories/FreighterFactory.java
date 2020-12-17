@@ -8,8 +8,8 @@ import es.ull.esit.transports.Transport;
  *  @brief A concrete factory, which function is generate a Freighter
  *
  */
-
 public class FreighterFactory implements TransportFactory {
+
     /**
      * @brief Override method capable to create a new Freighter
      * @return new Freighter

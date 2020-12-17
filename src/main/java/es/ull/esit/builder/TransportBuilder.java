@@ -2,15 +2,29 @@ package es.ull.esit.builder;
 
 import es.ull.esit.factories.TransportFactory;
 import es.ull.esit.transports.Transport;
-import es.ull.esit.utilities.Water;
+import es.ull.esit.utilities.WaterCoordinatesGenerator;
 
 import java.awt.geom.Point2D;
 
+/**
+ *
+ * @class TransportBuilder
+ * @brief Class to encapsulate the creation of transport objects.
+ *
+ * @details This class receives a TransportFactory and creates the desired transport object.
+ *
+ */
 public class TransportBuilder {
-    private final Transport transport;
+    private final Transport transport;  /**< Abstract transport to get built. */
 
+    /**
+     * @brief Class Constructor
+     * @details Instantiates a concrete transport using a given factory
+     * and calls the necessary setters to build the object.
+     * @param factory -> concrete transport factory
+     */
     public TransportBuilder(TransportFactory factory) {
-        Point2D[] coordinates = Water.getOceanCoordinates();
+        Point2D[] coordinates = WaterCoordinatesGenerator.getOceanCoordinates();
 
         assert coordinates != null;
         Point2D startLocation = coordinates[0];
@@ -23,6 +37,10 @@ public class TransportBuilder {
         transport.setPath();
     }
 
+    /**
+     * @brief Final object getter
+     * @return Transport -> built transport
+     */
     public Transport getBuild(){
         return transport;
     }

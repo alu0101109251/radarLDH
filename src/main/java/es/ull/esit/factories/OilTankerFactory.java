@@ -8,8 +8,8 @@ import es.ull.esit.transports.Transport;
  *  @brief A concrete factory, which function is generate an OilTanker
  *
  */
-
 public class OilTankerFactory implements TransportFactory {
+
     /**
      * @brief Override method capable to create a new OilTanker
      * @return new OilTanker

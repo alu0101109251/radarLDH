@@ -14,10 +14,8 @@ import es.ull.esit.factories.FreighterFactory;
 import es.ull.esit.factories.OilTankerFactory;
 import es.ull.esit.factories.TransportFactory;
 import es.ull.esit.transports.Transport;
-import es.ull.esit.utilities.Water;
 import processing.core.PApplet;
 
-import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
 public class GeoMap extends PApplet {

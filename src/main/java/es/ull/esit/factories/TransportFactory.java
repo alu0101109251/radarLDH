@@ -10,7 +10,11 @@ import es.ull.esit.transports.Transport;
  * @details This class provides methods to be implemented by concrete factories.
  *
  */
-
 public interface TransportFactory {
+
+    /**
+     * @brief Virtual method for creating transports
+     * @return Transport
+     */
     Transport createTransport();
 }

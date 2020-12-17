@@ -6,19 +6,32 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ *
+ * @class CsvGenerator
+ * @brief Class to generate a CSV file
+ *
+ * @details This class writes a CSV with each transport type and its location.
+ *
+ */
 public class CsvGenerator
 {
+    /**
+     * @brief Generates a CSV file
+     * @param fileName -> file path name
+     * @param transports -> array of transports to be written
+     */
     public static void generateCsvFile(String fileName, ArrayList<Transport> transports)
     {
         try
         {
             FileWriter writer = new FileWriter(fileName);
 
-            writer.append("TIPO");
+            writer.append("TYPE");
             writer.append(';');
-            writer.append("LATITUD");
+            writer.append("LATITUDE");
             writer.append(';');
-            writer.append("LONGITUD");
+            writer.append("LONGITUDE");
             writer.append('\n');
 
             for (Transport t : transports) {

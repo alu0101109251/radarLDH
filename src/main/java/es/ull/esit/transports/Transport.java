@@ -12,10 +12,9 @@ import java.util.ArrayList;
  * between every transport.
  *
  */
-
 public abstract class Transport {
 
-    public static final double N_INCREMENT = 0.05;
+    private static final double N_INCREMENT = 0.05;  /**< Constant to define location increment. */
 
     protected String type;              /**< Concrete transport type. */
 
@@ -57,28 +56,16 @@ public abstract class Transport {
         return false;
     }
 
+    /**
+     * @brief Generates a string representation of the object
+     * @return String -> formatted string
+     */
     @Override
     public String toString() {
         return "Transport{" +
                 "type='" + type + '\'' +
                 ", currentLocation=" + currentLocation +
                 '}';
-    }
-
-    /**
-     * @brief Returns number of path's positions
-     * @return int -> path size
-     */
-    public int pathSize() {
-        return path.size();
-    }
-
-    /**
-     * @brief currentPathIndex Getter
-     * @return int -> currentPathIndex value
-     */
-    public int getCurrentPathIndex() {
-        return currentPathIndex;
     }
 
     /**

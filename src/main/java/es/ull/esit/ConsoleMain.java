@@ -13,19 +13,9 @@ import java.util.ArrayList;
 public class ConsoleMain {
 
     public static final int N_TRANSPORTS = 1;
-    private final ArrayList<Transport> transports = new ArrayList<>();
+    public static final ArrayList<Transport> transports = new ArrayList<>();
 
-    public ConsoleMain() {
-        generateRandomTransports(new CruiseShipFactory());
-        generateRandomTransports(new FreighterFactory());
-        generateRandomTransports(new OilTankerFactory());
-    }
-
-    public ArrayList<Transport> getTransports() {
-        return transports;
-    }
-
-    private void generateRandomTransports(TransportFactory factory) {
+    private static void generateRandomTransports(TransportFactory factory) {
         for(int i = 0; i < N_TRANSPORTS; i++) {
 
             TransportBuilder builder = new TransportBuilder(factory);
@@ -35,9 +25,10 @@ public class ConsoleMain {
     }
 
     public static void main(String[] args) {
-        ConsoleMain consoleMain = new ConsoleMain();
 
-        ArrayList<Transport> transports = consoleMain.getTransports();
+        generateRandomTransports(new CruiseShipFactory());
+        generateRandomTransports(new FreighterFactory());
+        generateRandomTransports(new OilTankerFactory());
 
         // Storing initial coordinates in CSV
         String fileName = "./src/main/java/es/ull/esit/utilities/transports.csv";
@@ -45,15 +36,18 @@ public class ConsoleMain {
 
 
         // Simulating transport tracking
-        try{
+        try {
             boolean iterate = true;
 
             while(iterate) {
+
                 iterate = false;
+
                 for(Transport t : transports) {
                     System.out.println(t);
                     if(t.move()) iterate = true;
                 }
+
                 System.out.println('\n');
                 Thread.sleep(3000);
             }
