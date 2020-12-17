@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['setcurrentlocation',['setCurrentLocation',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#a5f4d43ae29a742a12c9b048a0d1dd9db',1,'es::ull::esit::transports::Transport']]],
-  ['setendlocation',['setEndLocation',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#a1b7aa72d20994d024abec66df9d2c1cd',1,'es::ull::esit::transports::Transport']]],
-  ['setpath',['setPath',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#a2fa4a5397ec319eb74198a30a9ef8784',1,'es::ull::esit::transports::Transport']]],
-  ['setstartlocation',['setStartLocation',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#ab438a1289e23a4b9c18213eb930e0e20',1,'es::ull::esit::transports::Transport']]],
-  ['setup',['setup',['../classes_1_1ull_1_1esit_1_1_geo_map.html#af1bc673f3a10c304646aacb6fb3ca82f',1,'es::ull::esit::GeoMap']]]
+  ['tostring',['toString',['../classes_1_1ull_1_1esit_1_1transports_1_1_transport.html#a4001f97aca59ee9dc688416bbd40da7d',1,'es::ull::esit::transports::Transport']]],
+  ['transportbuilder',['TransportBuilder',['../classes_1_1ull_1_1esit_1_1builder_1_1_transport_builder.html#ad5abe58bb81567db9f6b2563fc140b9c',1,'es::ull::esit::builder::TransportBuilder']]]
 ];

@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classes_1_1ull_1_1esit_1_1_geo_map.html" title="es.ull.esit.GeoMap" alt="" coords="121,5,252,32"/>
+<area shape="rect" id="node1" href="$interfacees_1_1ull_1_1esit_1_1factories_1_1_transport_factory.html" title="Interface to represent an Abstract Factory. " alt="" coords="5,71,196,112"/>
+<area shape="rect" id="node2" href="$classes_1_1ull_1_1esit_1_1factories_1_1_cruise_ship_factory.html" title="A concrete factory, which function is generate a CruiseShip. " alt="" coords="250,5,425,47"/>
+<area shape="rect" id="node3" href="$classes_1_1ull_1_1esit_1_1factories_1_1_freighter_factory.html" title="A concrete factory, which function is generate a Freighter. " alt="" coords="244,71,431,112"/>
+<area shape="rect" id="node4" href="$classes_1_1ull_1_1esit_1_1factories_1_1_oil_tanker_factory.html" title="A concrete factory, which function is generate an OilTanker. " alt="" coords="261,136,413,177"/>
 </map>
