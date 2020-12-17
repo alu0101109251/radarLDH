@@ -1,6 +1,7 @@
 package es.ull.esit;
 
 import es.ull.esit.factories.CruiseShipFactory;
+import es.ull.esit.factories.FreighterFactory;
 import es.ull.esit.factories.TransportFactory;
 import es.ull.esit.transports.CruiseShip;
 import es.ull.esit.transports.Transport;
@@ -46,6 +47,27 @@ public class RadarTest {
             assertAll("Verify we can update a transport location",
                     () -> assertEquals(expectedToString, cruise.toString(), "Transport toString"),
                     () -> assertTrue(cruise.move(), "Moving transport")
+            );
+        }
+    }
+
+    @DisplayName("Testing Factories")
+    @Nested
+    class FactoryTest {
+
+        private Transport freighter;
+
+        @BeforeEach
+        void setUp() {
+            TransportFactory factory = new FreighterFactory();
+            freighter = factory.createTransport();
+        }
+
+        @Test
+        @DisplayName("Factory Method")
+        void testFactoryMethod() {
+            assertAll("Verify the transport is constructed with the factory",
+                    () -> assertEquals("Freighter", freighter.getType(), "Transport Type")
             );
         }
     }
