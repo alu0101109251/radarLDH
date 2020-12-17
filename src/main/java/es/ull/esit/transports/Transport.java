@@ -15,6 +15,8 @@ import java.util.ArrayList;
 
 public abstract class Transport {
 
+    public static final double N_INCREMENT = 0.05;
+
     protected String type;              /**< Concrete transport type. */
 
     protected Point2D startLocation;    /**< Initial path transport coordinates location. */
@@ -116,49 +118,22 @@ public abstract class Transport {
     public void setPath() {
         path.add(startLocation);
 
-        int xI = Math.round((float) startLocation.getX());
-        int yI = Math.round((float) startLocation.getY());
+        double xI = startLocation.getX();
+        double yI = startLocation.getY();
 
-        int xF = Math.round((float) endLocation.getX());
-        int yF = Math.round((float) endLocation.getY());
+        double xF = endLocation.getX();
+        double yF = endLocation.getY();
 
         // Calculate straight line equation
-        float m = (float) (yF - yI) / (float) (xF - xI);
-        float c = yI - m*xI;
+        double m = (yF - yI) / (xF - xI);
+        double c = yI - m*xI;
 
-        assignLine(xI, yI, xF, yF, m, c);
-    }
+        // y = mx + c
+        double increment = (xF<xI? -N_INCREMENT:N_INCREMENT);
 
-    /**
-     * @brief Auxiliary method capable to assign a straight line points
-     * @param xI -> int value of x-coordinate
-     * @param yI -> int value of y-coordinate
-     * @param xF -> float value of x-coordinate
-     * @param yF -> float value of y-coordinate
-     * @param m  -> float value from slope of the line
-     * @param c  -> float value that represents the interception with y-axys
-     */
-    private void assignLine(int xI, int yI, int xF, int yF, float m, float c) {
-        // Determine dependent variable
-        int xDelta = Math.abs(xF - xI);
-        int yDelta = Math.abs(yF - yI);
-
-        // Assign straight line points
-        if(xDelta >= yDelta) {
-            // y = mx + c
-
-            for(int x = Math.min(xI, xF), j = 0; x <= Math.max(xI, xF); x++, j++) {
-                int y = Math.round(m*x + c);
-                path.add(new Point2D.Double(x, y));
-            }
-        }
-        else {
-            // x = (y - c) / m
-
-            for(int y = Math.min(yI, yF), j = 0; y <= Math.max(yI, yF); y++, j++) {
-                int x = Math.round((y - c) / m);
-                path.add(new Point2D.Double(x, y));
-            }
+        for(double x = xI; (x>xF?(x - xF > increment): (x -xF < increment)); x+= increment) {
+            double y = m * x + c;
+            path.add(new Point2D.Double(x, y));
         }
         path.add(endLocation);
     }

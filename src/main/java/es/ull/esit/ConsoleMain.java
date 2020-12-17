@@ -13,13 +13,13 @@ import java.util.ArrayList;
 
 public class ConsoleMain {
 
-    public static final int N_TRANSPORTS = 2;
+    public static final int N_TRANSPORTS = 1;
     private final ArrayList<Transport> transports = new ArrayList<>();
 
     public ConsoleMain() {
         generateRandomTransports(new CruiseShipFactory());
-        //generateRandomTransports(new FreighterFactory());
-        //generateRandomTransports(new OilTankerFactory());
+        generateRandomTransports(new FreighterFactory());
+        generateRandomTransports(new OilTankerFactory());
     }
 
     public ArrayList<Transport> getTransports() {
@@ -54,12 +54,6 @@ public class ConsoleMain {
         String fileName = "./src/main/java/es/ull/esit/utilities/transports.csv";
         CsvGenerator.generateCsvFile(fileName, transports);
 
-        // TODO: loop and update transports location
-
-        // Printing Initial Location
-        for(Transport t : transports) {
-            System.out.println(t);
-        }
 
         // Simulating transport tracking
         try{
@@ -68,8 +62,8 @@ public class ConsoleMain {
             while(iterate) {
                 iterate = false;
                 for(Transport t : transports) {
-                    if(t.move()) iterate = true;
                     System.out.println(t);
+                    if(t.move()) iterate = true;
                 }
                 System.out.println('\n');
                 Thread.sleep(3000);
