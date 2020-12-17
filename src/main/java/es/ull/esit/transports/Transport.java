@@ -61,6 +61,10 @@ public abstract class Transport {
      */
     public Double getLongitude() { return currentLocation.getY(); }
 
+    /**
+     * @brief This method will be able to refresh the position
+     * transport in the map
+     */
     public void move() {
         currentPathIndex++;
         if(currentPathIndex < path.size()) {
