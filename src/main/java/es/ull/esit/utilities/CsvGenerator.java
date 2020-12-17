@@ -4,7 +4,7 @@ import es.ull.esit.transports.Transport;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -17,15 +17,20 @@ import java.util.ArrayList;
 public class CsvGenerator
 {
     /**
+     * @brief Private constructor to avoid instantiation of static utility class
+     */
+    private CsvGenerator() {
+        throw new IllegalStateException("Utility class");
+    }
+
+    /**
      * @brief Generates a CSV file
      * @param fileName -> file path name
      * @param transports -> array of transports to be written
      */
-    public static void generateCsvFile(String fileName, ArrayList<Transport> transports)
+    public static void generateCsvFile(String fileName, List<Transport> transports)
     {
-        try
-        {
-            FileWriter writer = new FileWriter(fileName);
+        try (FileWriter writer = new FileWriter(fileName)) {
 
             writer.append("TYPE");
             writer.append(';');
@@ -44,8 +49,8 @@ public class CsvGenerator
             }
 
             writer.flush();
-            writer.close();
-        } catch(IOException e) {
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
