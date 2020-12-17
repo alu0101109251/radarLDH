@@ -2,6 +2,8 @@ package es.ull.esit;
 
 import de.fhpotsdam.unfolding.UnfoldingMap;
 import de.fhpotsdam.unfolding.geo.Location;
+import de.fhpotsdam.unfolding.marker.Marker;
+import de.fhpotsdam.unfolding.marker.MarkerManager;
 import de.fhpotsdam.unfolding.marker.SimplePointMarker;
 import de.fhpotsdam.unfolding.providers.AbstractMapProvider;
 import de.fhpotsdam.unfolding.providers.Microsoft;
@@ -26,6 +28,7 @@ public class GeoMap extends PApplet {
     private static final int mapWidth = 350;
     private static final int mapHeight = 500;
 
+    private MarkerManager<Marker> markerManager;
     private UnfoldingMap map;
 
     // Function which implements the unfolds library
@@ -45,39 +48,56 @@ public class GeoMap extends PApplet {
         generateRandomTransports(new FreighterFactory());
         generateRandomTransports(new OilTankerFactory());
 
-        setMarkers();
+        markerManager = map.getDefaultMarkerManager();
     }
 
-    public void setMarkers() {
+    private void updateMarkers() {
         for(Transport t : transports) {
             Location location = new Location(t.getLatitude(), t.getLongitude());
             SimplePointMarker marker = new SimplePointMarker(location);
-            map.addMarker(marker);
+            markerManager.addMarker(marker);
+            t.move();
         }
     }
 
     // Function to draw the applet window
     public void draw()
     {
+        markerManager.clearMarkers();
+        updateMarkers();
         this.background(0, 0, 128);
         map.draw();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
-    // TODO: extract initial and final point from json
+    public void keyPressed() {
+        if (key == 'a') {
+            markerManager.clearMarkers();
+            updateMarkers();
+        }
+    }
+
     private void generateRandomTransports(TransportFactory factory) {
-        /*for(int i = 0; i < N_TRANSPORTS; i++) {
-            Point2D coordinates = Water.getOceanCoordinates();
+        for(int i = 0; i < N_TRANSPORTS; i++) {
+
+            Point2D[] coordinates = Water.getOceanCoordinates();
 
             assert coordinates != null;
-            System.out.println(coordinates);
-            double latitude = coordinates.getX();
-            double longitude = coordinates.getY();
+            Point2D startLocation = coordinates[0];
+            Point2D endLocation = coordinates[1];
 
-            Transport t = factory.createTransport(, );
-            t.setCoordinates(latitude, longitude);
+            Transport t = factory.createTransport();
+
+            t.setStartLocation(startLocation.getX(), startLocation.getY());
+            t.setEndLocation(endLocation.getX(), endLocation.getY());
+            t.setPath();
 
             transports.add(t);
-        }*/
+        }
     }
 
     public static void main(String[] args) {
