@@ -9,6 +9,7 @@ import es.ull.esit.transports.Transport;
 import es.ull.esit.utilities.CsvGenerator;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,7 +18,7 @@ public class ConsoleMain {
     private static final Logger LOGGER = Logger.getLogger(ConsoleMain.class.getName());
 
     public static final int N_TRANSPORTS = 3;
-    public static final ArrayList<Transport> transports = new ArrayList<>();
+    protected static final List<Transport> transports = new ArrayList<>();
 
     private static void generateRandomTransports(TransportFactory factory) {
         for(int i = 0; i < N_TRANSPORTS; i++) {

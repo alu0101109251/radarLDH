@@ -31,6 +31,7 @@ public class GeoMap extends PApplet {
     private UnfoldingMap map;
 
     // Function which implements the unfolds library
+    @Override
     public void setup()
     {
         size(800, 600);
@@ -60,6 +61,7 @@ public class GeoMap extends PApplet {
     }
 
     // Function to draw the applet window
+    @Override
     public void draw()
     {
         markerManager.clearMarkers();

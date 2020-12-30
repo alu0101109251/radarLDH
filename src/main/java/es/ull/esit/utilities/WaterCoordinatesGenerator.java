@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import java.awt.geom.Point2D;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -37,7 +38,7 @@ public class WaterCoordinatesGenerator {
         try {
             String pathname = "./src/main/java/es/ull/esit/utilities/ocean.json";
 
-            String fromFile = FileUtils.readFileToString(new File(pathname),"UTF-8");
+            String fromFile = FileUtils.readFileToString(new File(pathname), StandardCharsets.UTF_8);
             JSONArray coordinates = new JSONArray(fromFile);
 
             // pull random coordinates from the array:
