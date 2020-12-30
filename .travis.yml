@@ -1,11 +1,19 @@
 # Virtual Machine Configuration
-os: linux
-dist: xenial
+os:
+  - linux
+  - osx
+
+matrix:
+  include:
+    - dist: trusty
+    - dist: xenial
+    - dist: bionic
 
 # Project JDK
 language: java
 jdk:
   - openjdk11
+  - oraclejdk11
 
 # Necessary Plugins
 addons:
@@ -28,8 +36,7 @@ script:
 # GitHub Pages Deployment
 deploy:
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  token: $GITHUB_TOKEN
   keep_history: true
   local_dir: docs/html
   on:
