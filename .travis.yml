@@ -1,10 +1,6 @@
 # Virtual Machine Configuration
-jobs:
-  include:
-    - os: linux
-      dist: trusty
-    - os: osx
-      osx_image: xcode11.3
+os: linux
+dist: xenial
 
 # Project JDK
 language: java
@@ -33,7 +29,7 @@ script:
 # GitHub Pages Deployment
 deploy:
   provider: pages
-  cleanup: true
+  skip_cleanup: true
   github_token: $GITHUB_TOKEN
   keep_history: true
   local_dir: docs/html
