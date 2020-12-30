@@ -1,13 +1,11 @@
 package es.ull.esit;
 
 import es.ull.esit.builder.TransportBuilder;
-import es.ull.esit.factories.CruiseShipFactory;
 import es.ull.esit.factories.FreighterFactory;
 import es.ull.esit.factories.OilTankerFactory;
 import es.ull.esit.factories.TransportFactory;
 import es.ull.esit.transports.CruiseShip;
 import es.ull.esit.transports.Transport;
-
 import es.ull.esit.utilities.CsvGenerator;
 import es.ull.esit.utilities.WaterCoordinatesGenerator;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,7 +14,7 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
-import java.awt.geom.Point2D;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,7 +53,12 @@ public class RadarTest {
             String expectedToString = "Transport{type='CruiseShip', currentLocation=Point2D.Double[28.453323, -16.02971]}";
             assertAll("Verify we can update a transport location",
                     () -> assertEquals(expectedToString, cruise.toString(), "Transport toString"),
-                    () -> assertTrue(cruise.move(), "Moving transport")
+                    () -> assertTrue(cruise.move(), "Moving transport"),
+                    () -> {
+                        for(int i = 0; i < 10000; i++)
+                            cruise.move();
+                        assertFalse(cruise.move(), "Transport shouldn't move if end reached");
+                    }
             );
         }
     }
@@ -111,7 +114,7 @@ public class RadarTest {
         @Test
         @DisplayName("Water Coordinates")
         void testWaterCoordinatesGenerator() {
-           assertDoesNotThrow((Executable) WaterCoordinatesGenerator::getOceanCoordinates, "Verify we can obtain water coordinates from JSON");
+            assertDoesNotThrow((Executable) WaterCoordinatesGenerator::getOceanCoordinates, "Verify we can obtain water coordinates from JSON");
         }
 
         @Test
@@ -119,7 +122,22 @@ public class RadarTest {
         void testCsvGenerator() {
             List<Transport> testList = new ArrayList<>();
             testList.add(new TransportBuilder(new OilTankerFactory()).getBuild());
-            assertDoesNotThrow(() -> CsvGenerator.generateCsvFile("dummy.csv", testList), "Verify we save a CSV file");
+            assertAll("Verify the CSV generator works properly",
+                    () -> assertDoesNotThrow(() -> CsvGenerator.generateCsvFile("dummy.csv", testList), "Verify we save a CSV file"),
+                    () -> assertThrows(NullPointerException.class, ()-> CsvGenerator.generateCsvFile(null, testList), "Testing invalid filename")
+            );
         }
+    }
+
+    @DisplayName("Testing Console Main")
+    @Nested
+    class ConsoleMainTest {
+
+    }
+
+    @DisplayName("Testing GeoMap Main")
+    @Nested
+    class GeoMapTest {
+
     }
 }

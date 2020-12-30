@@ -84,7 +84,7 @@ There are 2 different main program simulations.
         ```
     
 2. [GeoMap](src/main/java/es/ull/esit/GeoMap.java): simulates ship tracking showing output in a geographical map.
-    * Open the Project and run ConsoleMain configuration.
+    * Open the Project and run GeoMap configuration.
     * You will start seeing markers for each transport, which are updated automatically.
     * If you desired more transports per type, just edit ``N_TRANSPORT`` constant.
     * Output should be as follows:

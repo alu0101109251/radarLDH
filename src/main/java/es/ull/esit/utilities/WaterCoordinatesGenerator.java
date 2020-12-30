@@ -27,9 +27,7 @@ public class WaterCoordinatesGenerator {
     /**
      * @brief Private constructor to avoid instantiation of static utility class
      */
-    private WaterCoordinatesGenerator() {
-        throw new IllegalStateException("Utility class");
-    }
+    private WaterCoordinatesGenerator() { }
 
     /**
      * @brief Random ocean coordinates getter
@@ -61,6 +59,6 @@ public class WaterCoordinatesGenerator {
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, e.toString(), e);
         }
-        return null;
+        return new Point2D[0];
     }
 }

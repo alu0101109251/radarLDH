@@ -23,9 +23,7 @@ public class CsvGenerator {
     /**
      * @brief Private constructor to avoid instantiation of static utility class
      */
-    private CsvGenerator() {
-        throw new IllegalStateException("Utility class");
-    }
+    private CsvGenerator() { }
 
     /**
      * @brief Generates a CSV file
