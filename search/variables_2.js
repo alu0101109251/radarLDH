@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['map',['map',['../classes_1_1ull_1_1esit_1_1_geo_map.html#aafeae4b7b1f09fe981acb1ef6e986d91',1,'es::ull::esit::GeoMap']]],
-  ['markermanager',['markerManager',['../classes_1_1ull_1_1esit_1_1_geo_map.html#ad0e0ddf557f36413a64db8d3cf388bfd',1,'es::ull::esit::GeoMap']]]
+  ['logger',['LOGGER',['../classes_1_1ull_1_1esit_1_1_console_main.html#a8e20b802885d4eb8d1412b63e11f980d',1,'es.ull.esit.ConsoleMain.LOGGER()'],['../classes_1_1ull_1_1esit_1_1_geo_map.html#ac12a8988bb5b2612f0a68218a2ce3e99',1,'es.ull.esit.GeoMap.LOGGER()'],['../classes_1_1ull_1_1esit_1_1utilities_1_1_csv_generator.html#ab3a0012ea797b1aa8a7f30f2ea1587c0',1,'es.ull.esit.utilities.CsvGenerator.LOGGER()'],['../classes_1_1ull_1_1esit_1_1utilities_1_1_water_coordinates_generator.html#a608a9c1c784e406ae2c43c87ee05e601',1,'es.ull.esit.utilities.WaterCoordinatesGenerator.LOGGER()']]]
 ];
