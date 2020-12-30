@@ -20,6 +20,13 @@ addons:
       - doxygen-latex
       - doxygen-gui
       - graphviz
+  homebrew:
+    packages:
+      - doxygen
+      - doxygen-doc
+      - doxygen-latex
+      - doxygen-gui
+      - graphviz
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
@@ -30,7 +37,8 @@ script:
 # GitHub Pages Deployment
 deploy:
   provider: pages
-  skip_cleanup: true
+  strategy: git
+  cleanup: false
   github_token: $GITHUB_TOKEN
   keep_history: true
   local_dir: docs/html
