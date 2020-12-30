@@ -5,6 +5,8 @@ import es.ull.esit.transports.Transport;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -14,8 +16,10 @@ import java.util.List;
  * @details This class writes a CSV with each transport type and its location.
  *
  */
-public class CsvGenerator
-{
+public class CsvGenerator {
+
+    private static final Logger LOGGER = Logger.getLogger(CsvGenerator.class.getName());     /**< Class Logger. **/
+
     /**
      * @brief Private constructor to avoid instantiation of static utility class
      */
@@ -28,8 +32,7 @@ public class CsvGenerator
      * @param fileName -> file path name
      * @param transports -> array of transports to be written
      */
-    public static void generateCsvFile(String fileName, List<Transport> transports)
-    {
+    public static void generateCsvFile(String fileName, List<Transport> transports) {
         try (FileWriter writer = new FileWriter(fileName)) {
 
             writer.append("TYPE");
@@ -51,7 +54,7 @@ public class CsvGenerator
             writer.flush();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.SEVERE, e.toString(), e);
         }
     }
 }

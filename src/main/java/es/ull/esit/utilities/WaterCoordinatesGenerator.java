@@ -8,6 +8,8 @@ import java.awt.geom.Point2D;
 import java.io.File;
 import java.io.IOException;
 import java.security.SecureRandom;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -19,6 +21,8 @@ import java.security.SecureRandom;
  *
  */
 public class WaterCoordinatesGenerator {
+
+    private static final Logger LOGGER = Logger.getLogger(WaterCoordinatesGenerator.class.getName());     /**< Class Logger. **/
 
     /**
      * @brief Random ocean coordinates getter
@@ -48,7 +52,7 @@ public class WaterCoordinatesGenerator {
             return new Point2D[] { start, end };
 
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.SEVERE, e.toString(), e);
         }
         return null;
     }

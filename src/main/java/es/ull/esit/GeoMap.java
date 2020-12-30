@@ -17,8 +17,12 @@ import es.ull.esit.transports.Transport;
 import processing.core.PApplet;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class GeoMap extends PApplet {
+
+    private static final Logger LOGGER = Logger.getLogger(GeoMap.class.getName());
 
     public static final int N_TRANSPORTS = 5;
     private final ArrayList<Transport> transports = new ArrayList<>();
@@ -65,7 +69,7 @@ public class GeoMap extends PApplet {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.SEVERE, e.toString(), e);
             Thread.currentThread().interrupt();
         }
     }

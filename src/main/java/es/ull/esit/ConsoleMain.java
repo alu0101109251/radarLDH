@@ -9,8 +9,12 @@ import es.ull.esit.transports.Transport;
 import es.ull.esit.utilities.CsvGenerator;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ConsoleMain {
+
+    private static final Logger LOGGER = Logger.getLogger(ConsoleMain.class.getName());
 
     public static final int N_TRANSPORTS = 3;
     public static final ArrayList<Transport> transports = new ArrayList<>();
@@ -23,6 +27,8 @@ public class ConsoleMain {
             transports.add(builder.getBuild());
         }
     }
+
+    // TODO: menu for manual and automatic mode
 
     public static void main(String[] args) {
 
@@ -44,16 +50,16 @@ public class ConsoleMain {
                 iterate = false;
 
                 for(Transport t : transports) {
-                    System.out.println(t);
+                    LOGGER.info(t.toString());
                     if(t.move()) iterate = true;
                 }
 
-                System.out.println('\n');
+                LOGGER.info("\n");
                 Thread.sleep(3000);
             }
         }
         catch (InterruptedException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.SEVERE, e.toString(), e);
             Thread.currentThread().interrupt();
         }
 
