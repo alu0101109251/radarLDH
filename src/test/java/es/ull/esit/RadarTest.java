@@ -8,10 +8,17 @@ import es.ull.esit.factories.TransportFactory;
 import es.ull.esit.transports.CruiseShip;
 import es.ull.esit.transports.Transport;
 
+import es.ull.esit.utilities.CsvGenerator;
+import es.ull.esit.utilities.WaterCoordinatesGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
+
+import java.awt.geom.Point2D;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -97,5 +104,22 @@ public class RadarTest {
         }
     }
 
+    @DisplayName("Testing Utilities")
+    @Nested
+    class UtilitiesTest {
 
+        @Test
+        @DisplayName("Water Coordinates")
+        void testWaterCoordinatesGenerator() {
+           assertDoesNotThrow((Executable) WaterCoordinatesGenerator::getOceanCoordinates, "Verify we can obtain water coordinates from JSON");
+        }
+
+        @Test
+        @DisplayName("CSV Generator")
+        void testCsvGenerator() {
+            List<Transport> testList = new ArrayList<>();
+            testList.add(new TransportBuilder(new OilTankerFactory()).getBuild());
+            assertDoesNotThrow(() -> CsvGenerator.generateCsvFile("dummy.csv", testList), "Verify we save a CSV file");
+        }
+    }
 }

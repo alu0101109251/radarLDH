@@ -25,6 +25,13 @@ public class WaterCoordinatesGenerator {
     private static final Logger LOGGER = Logger.getLogger(WaterCoordinatesGenerator.class.getName());     /**< Class Logger. **/
 
     /**
+     * @brief Private constructor to avoid instantiation of static utility class
+     */
+    private WaterCoordinatesGenerator() {
+        throw new IllegalStateException("Utility class");
+    }
+
+    /**
      * @brief Random ocean coordinates getter
      * @return Point2D[] -> array containing [startPoint, endPoint]
      */
