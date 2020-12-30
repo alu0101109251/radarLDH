@@ -10,34 +10,37 @@ jdk:
   - oraclejdk11
 
 # Necessary Plugins
-addons:
-  sonarcloud:
-    organization: "alu0101109251"
-  apt:
-    packages:
-      - doxygen
-      - doxygen-doc
-      - doxygen-latex
-      - doxygen-gui
-      - graphviz
+
+
 
 # Package will be tested in every OS
 script: mvn clean verify
 
 stages:  # determines the order everything runs in
-  - test
+  - sonar
   - deploy
 jobs:  #  specifies the actual job
   include:
-    - stage: test   # executing sonar analysis only once
+    - stage: sonar   # executing sonar analysis only once
       os: linux
       jdk: openjdk11
+      addons:
+        sonarcloud:
+          organization: "alu0101109251"
       # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
       script: mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 
     - stage: deploy   # deploying sonar analysis only once
       os: linux
       jkd: openjdk11
+      addons:
+        apt:
+          packages:
+            - doxygen
+            - doxygen-doc
+            - doxygen-latex
+            - doxygen-gui
+            - graphviz
       # generate documentation using Doxyfile config
       script: doxygen Doxyfile
       # GitHub Pages Deployment
