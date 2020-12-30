@@ -27,6 +27,7 @@ addons:
       - doxygen-latex
       - doxygen-gui
       - graphviz
+    update: true
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
