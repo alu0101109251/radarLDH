@@ -20,28 +20,33 @@ addons:
       - doxygen-latex
       - doxygen-gui
       - graphviz
-  homebrew:
-    packages:
-      - doxygen
-      - doxygen-doc
-      - doxygen-latex
-      - doxygen-gui
-      - graphviz
-    update: true
 
-script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
-  # generate documentation using Doxyfile config
-  - doxygen Doxyfile
+# Package will be tested in every OS
+script: mvn clean verify
 
-# GitHub Pages Deployment
-deploy:
-  provider: pages
-  strategy: git
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  local_dir: docs/html
-  on:
-    branch: main
+stages:  # determines the order everything runs in
+  - test
+  - deploy
+jobs:  #  specifies the actual job
+  include:
+    - stage: test   # executing sonar analysis only once
+      os: linux
+      jdk: openjdk11
+      # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+      script: mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+
+    - stage: deploy   # deploying sonar analysis only once
+      os: linux
+      jkd: openjdk11
+      # generate documentation using Doxyfile config
+      script: doxygen Doxyfile
+      # GitHub Pages Deployment
+      deploy:
+        provider: pages
+        strategy: git
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        keep_history: true
+        local_dir: docs/html
+        on:
+          branch: main
