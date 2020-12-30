@@ -1,6 +1,7 @@
 # Virtual Machine Configuration
-os: linux
-dist: xenial
+os:
+  - linux
+  - osx
 
 # Project JDK
 language: java
@@ -29,7 +30,6 @@ script:
 # GitHub Pages Deployment
 deploy:
   provider: pages
-  skip_cleanup: true
   github_token: $GITHUB_TOKEN
   keep_history: true
   local_dir: docs/html
