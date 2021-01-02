@@ -12,11 +12,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.api.function.Executable;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -127,17 +129,27 @@ public class RadarTest {
                     () -> assertThrows(NullPointerException.class, ()-> CsvGenerator.generateCsvFile(null, testList), "Testing invalid filename")
             );
         }
-    }
+    }    
 
-    @DisplayName("Testing Console Main")
-    @Nested
-    class ConsoleMainTest {
-
-    }
+//    @DisplayName("Testing Console Main")
+//    @Nested
+//    class ConsoleMainTest {
+//    	@Test
+//    	@Timeout(value = 5, unit = TimeUnit.SECONDS)
+//    	@DisplayName("Main tester")
+//    	void testConsoleMain() {
+//    		ConsoleMain.main(new String[] {});
+//    	}
+//
+//    }
 
     @DisplayName("Testing GeoMap Main")
     @Nested
     class GeoMapTest {
-
+    	@Test
+    	@DisplayName("Testing GeoMap")
+    	void testGeoMap() {
+    		es.ull.esit.GeoMap.main(new String[] {});
+    	}
     }
 }

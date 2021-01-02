@@ -51,8 +51,8 @@ public class ConsoleMain {
                 iterate = false;
 
                 for(Transport t : transports) {
-                    LOGGER.info(t.toString());
-                    if(t.move()) iterate = true;
+                	LOGGER.info(t.toString());
+                	if(t.move()) iterate = true;
                 }
 
                 LOGGER.info("\n");

@@ -27,8 +27,8 @@ public class GeoMap extends PApplet {
     public static final int N_TRANSPORTS = 5;
     private final ArrayList<Transport> transports = new ArrayList<>();
 
-    private MarkerManager<Marker> markerManager;
-    private UnfoldingMap map;
+    private transient MarkerManager<Marker> markerManager;
+    private transient UnfoldingMap map;
 
     // Function which implements the unfolds library
     @Override
