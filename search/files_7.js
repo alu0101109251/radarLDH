@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['watercoordinatesgenerator_2ejava',['WaterCoordinatesGenerator.java',['../_water_coordinates_generator_8java.html',1,'']]]
+  ['userinterface_2ejava',['UserInterface.java',['../_user_interface_8java.html',1,'']]]
 ];

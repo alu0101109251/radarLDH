@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['watercoordinatesgenerator',['WaterCoordinatesGenerator',['../classes_1_1ull_1_1esit_1_1utilities_1_1_water_coordinates_generator.html',1,'es::ull::esit::utilities']]],
-  ['watercoordinatesgenerator',['WaterCoordinatesGenerator',['../classes_1_1ull_1_1esit_1_1utilities_1_1_water_coordinates_generator.html#abafa0d9b05188386de5f6e17fbac3f33',1,'es::ull::esit::utilities::WaterCoordinatesGenerator']]],
-  ['watercoordinatesgenerator_2ejava',['WaterCoordinatesGenerator.java',['../_water_coordinates_generator_8java.html',1,'']]]
+  ['updatemarkers',['updateMarkers',['../classes_1_1ull_1_1esit_1_1_geo_map.html#a437b5a953638683d61c96d7fcc21b14b',1,'es::ull::esit::GeoMap']]],
+  ['userinterface',['UserInterface',['../classes_1_1ull_1_1esit_1_1utilities_1_1_user_interface.html#adfe2ec691386ffe8f7ae7634c0bac26e',1,'es::ull::esit::utilities::UserInterface']]],
+  ['userinterface',['UserInterface',['../classes_1_1ull_1_1esit_1_1utilities_1_1_user_interface.html',1,'es::ull::esit::utilities']]],
+  ['userinterface_2ejava',['UserInterface.java',['../_user_interface_8java.html',1,'']]]
 ];
