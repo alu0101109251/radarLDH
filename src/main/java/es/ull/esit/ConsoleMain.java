@@ -19,6 +19,7 @@ import java.util.logging.Logger;
 public class ConsoleMain {
 
     private static final Logger LOGGER = Logger.getLogger(ConsoleMain.class.getName());
+    public static final String LINE_SEPARATOR = "----------------------";
 
     public static final int N_TRANSPORTS = 3;
     protected static final List<Transport> TRANSPORT_LIST = new ArrayList<>();
@@ -38,11 +39,11 @@ public class ConsoleMain {
 
         do {
             LOGGER.info("Welcome");
-            LOGGER.info("----------------------");
+            LOGGER.info(LINE_SEPARATOR);
             LOGGER.info("(1) Automatic Mode");
             LOGGER.info("(2) Manual Mode");
             LOGGER.info("(3) End");
-            LOGGER.info("----------------------");
+            LOGGER.info(LINE_SEPARATOR);
             LOGGER.info("Please enter a number: ");
 
             input = scanner.nextInt();
@@ -107,14 +108,14 @@ public class ConsoleMain {
 
         do {
             LOGGER.info("Manual Mode");
-            LOGGER.info("----------------------");
+            LOGGER.info(LINE_SEPARATOR);
             LOGGER.info("(1) Create Ship");
             LOGGER.info("(2) Kill Ship");
             LOGGER.info("(3) Update Ship Position");
             LOGGER.info("(4) See Position Status");
             LOGGER.info("(5) Save Current Data to CSV");
             LOGGER.info("(6) End");
-            LOGGER.info("----------------------");
+            LOGGER.info(LINE_SEPARATOR);
             LOGGER.info("Select desired operation: ");
 
             input = scanner.nextInt();
@@ -161,11 +162,11 @@ public class ConsoleMain {
         int input;
 
         LOGGER.info("Please select ship type: ");
-        LOGGER.info("----------------------");
+        LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("(1) CruiseShip");
         LOGGER.info("(2) Freighter");
         LOGGER.info("(3) OilTanker");
-        LOGGER.info("----------------------");
+        LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("Select: ");
 
         input = scanner.nextInt();
@@ -188,7 +189,7 @@ public class ConsoleMain {
 
         Transport transport = factory.createTransport();
 
-        LOGGER.info("----------------------");
+        LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("Enter initial coordinates: ");
 
         LOGGER.info("Latitude: ");
@@ -200,7 +201,7 @@ public class ConsoleMain {
         transport.setCurrentLocation(latitude, longitude);
         TRANSPORT_LIST.add(transport);
 
-        LOGGER.info("----------------------");
+        LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("Done!");
     }
 
@@ -217,11 +218,11 @@ public class ConsoleMain {
 
     private static void showShipStatus() {
         LOGGER.info("Current Ship Locations");
-        LOGGER.info("----------------------");
+        LOGGER.info(LINE_SEPARATOR);
         for(Transport t : TRANSPORT_LIST) {
             LOGGER.info(t.toString());
         }
-        LOGGER.info("----------------------");
+        LOGGER.info(LINE_SEPARATOR);
     }
 
     private static void updateShip() {
@@ -230,7 +231,7 @@ public class ConsoleMain {
         LOGGER.info("Please choose ship to update: ");
         int input = getSelectedShip(scanner);
 
-        LOGGER.info("----------------------");
+        LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("Enter new coordinates: ");
 
         LOGGER.info("Latitude: ");
@@ -240,17 +241,17 @@ public class ConsoleMain {
         double longitude = scanner.nextDouble();
 
         TRANSPORT_LIST.get(input).setCurrentLocation(latitude, longitude);
-        LOGGER.info("----------------------");
+        LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("Removed!");
     }
 
     private static int getSelectedShip(Scanner scanner) {
         int input;
-        LOGGER.info("----------------------");
+        LOGGER.info(LINE_SEPARATOR);
         for(int i = 0; i < TRANSPORT_LIST.size(); i++) {
             LOGGER.info("(" + i + ") " + TRANSPORT_LIST.get(i).toString());
         }
-        LOGGER.info("----------------------");
+        LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("Select: ");
 
         input = scanner.nextInt();
