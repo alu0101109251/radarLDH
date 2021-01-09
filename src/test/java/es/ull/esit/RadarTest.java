@@ -8,18 +8,18 @@ import es.ull.esit.factories.TransportFactory;
 import es.ull.esit.transports.CruiseShip;
 import es.ull.esit.transports.Transport;
 import es.ull.esit.utilities.CsvGenerator;
+import es.ull.esit.utilities.LogFormatter;
 import es.ull.esit.utilities.WaterCoordinatesGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.api.function.Executable;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -138,6 +138,15 @@ public class RadarTest {
                     () -> assertDoesNotThrow(() -> CsvGenerator.generateCsvFile("dummy.csv", testList), "Verify we save a CSV file"),
                     () -> assertThrows(NullPointerException.class, ()-> CsvGenerator.generateCsvFile(null, testList), "Testing invalid filename")
             );
+        }
+
+        @Test
+        @DisplayName("LOG Formatter")
+        void testLogFormatter() {
+            LogRecord sample = new LogRecord(Level.INFO, "Test Message");
+            LogFormatter formatter = new LogFormatter();
+
+            assertEquals("Test Message\r\n", formatter.format(sample), "We can format a logging message");
         }
     }
 }
