@@ -23,6 +23,7 @@ public class ConsoleMain {
 
     public static final int N_TRANSPORTS = 3;
     protected static final List<Transport> TRANSPORT_LIST = new ArrayList<>();
+    public static final Scanner SCANNER = new Scanner(System.in);
 
     public static void main(String[] args) {
         ConsoleHandler handler = new ConsoleHandler();
@@ -103,7 +104,6 @@ public class ConsoleMain {
     }
 
     private static void manualMode() {
-        Scanner scanner = new Scanner(System.in);
         int input;
 
         do {
@@ -118,7 +118,7 @@ public class ConsoleMain {
             LOGGER.info(LINE_SEPARATOR);
             LOGGER.info("Select desired operation: ");
 
-            input = scanner.nextInt();
+            input = SCANNER.nextInt();
 
             switch (input) {
                 case 1:
@@ -145,7 +145,7 @@ public class ConsoleMain {
                     break;
             }
 
-        } while (input != 5);
+        } while (input != 6);
     }
 
     private static void generateRandomTransports(TransportFactory factory) {
@@ -158,9 +158,6 @@ public class ConsoleMain {
     }
 
     private static void createShip() {
-        Scanner scanner = new Scanner(System.in);
-        int input;
-
         LOGGER.info("Please select ship type: ");
         LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("(1) CruiseShip");
@@ -169,11 +166,9 @@ public class ConsoleMain {
         LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("Select: ");
 
-        input = scanner.nextInt();
-
         TransportFactory factory;
 
-        switch (input) {
+        switch (SCANNER.nextInt()) {
             case 1:
                 factory = new CruiseShipFactory();
                 break;
@@ -184,7 +179,7 @@ public class ConsoleMain {
                 factory = new OilTankerFactory();
                 break;
             default:
-                throw new IllegalStateException("Unexpected value: " + input);
+                throw new IllegalStateException("Unexpected value");
         }
 
         Transport transport = factory.createTransport();
@@ -193,10 +188,10 @@ public class ConsoleMain {
         LOGGER.info("Enter initial coordinates: ");
 
         LOGGER.info("Latitude: ");
-        double latitude = scanner.nextDouble();
+        double latitude = SCANNER.nextDouble();
 
         LOGGER.info("Longitude: ");
-        double longitude = scanner.nextDouble();
+        double longitude = SCANNER.nextDouble();
 
         transport.setCurrentLocation(latitude, longitude);
         TRANSPORT_LIST.add(transport);
@@ -206,10 +201,8 @@ public class ConsoleMain {
     }
 
     private static void killShip() {
-        Scanner scanner = new Scanner(System.in);
-
         LOGGER.info("Please choose ship to delete: ");
-        int input = getSelectedShip(scanner);
+        int input = getSelectedShip();
 
         TRANSPORT_LIST.remove(input);
         LOGGER.info("Removed!");
@@ -226,27 +219,24 @@ public class ConsoleMain {
     }
 
     private static void updateShip() {
-        Scanner scanner = new Scanner(System.in);
-
         LOGGER.info("Please choose ship to update: ");
-        int input = getSelectedShip(scanner);
+        int input = getSelectedShip();
 
         LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("Enter new coordinates: ");
 
         LOGGER.info("Latitude: ");
-        double latitude = scanner.nextDouble();
+        double latitude = SCANNER.nextDouble();
 
         LOGGER.info("Longitude: ");
-        double longitude = scanner.nextDouble();
+        double longitude = SCANNER.nextDouble();
 
         TRANSPORT_LIST.get(input).setCurrentLocation(latitude, longitude);
         LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("Removed!");
     }
 
-    private static int getSelectedShip(Scanner scanner) {
-        int input;
+    private static int getSelectedShip() {
         LOGGER.info(LINE_SEPARATOR);
         for(int i = 0; i < TRANSPORT_LIST.size(); i++) {
             LOGGER.info("(" + i + ") " + TRANSPORT_LIST.get(i).toString());
@@ -254,7 +244,6 @@ public class ConsoleMain {
         LOGGER.info(LINE_SEPARATOR);
         LOGGER.info("Select: ");
 
-        input = scanner.nextInt();
-        return input;
+        return SCANNER.nextInt();
     }
 }
