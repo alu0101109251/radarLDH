@@ -26,7 +26,6 @@ public class TransportBuilder {
     public TransportBuilder(TransportFactory factory) {
         Point2D[] coordinates = WaterCoordinatesGenerator.getOceanCoordinates();
 
-        assert coordinates != null;
         Point2D startLocation = coordinates[0];
         Point2D endLocation = coordinates[1];
 

@@ -1,6 +1,7 @@
 package es.ull.esit;
 
 import es.ull.esit.builder.TransportBuilder;
+import es.ull.esit.factories.CruiseShipFactory;
 import es.ull.esit.factories.FreighterFactory;
 import es.ull.esit.factories.OilTankerFactory;
 import es.ull.esit.factories.TransportFactory;
@@ -70,18 +71,27 @@ public class RadarTest {
     class FactoryTest {
 
         private Transport freighter;
+        private Transport cruiseShip;
+        private Transport oilTanker;
 
         @BeforeEach
         void setUp() {
-            TransportFactory factory = new FreighterFactory();
-            freighter = factory.createTransport();
+            TransportFactory freighterFactory = new FreighterFactory();
+            TransportFactory cruiseShipFactory = new CruiseShipFactory();
+            TransportFactory oilTankerFactory = new OilTankerFactory();
+
+            freighter = freighterFactory.createTransport();
+            cruiseShip = cruiseShipFactory.createTransport();
+            oilTanker = oilTankerFactory.createTransport();
         }
 
         @Test
         @DisplayName("Factory Method")
         void testFactoryMethod() {
-            assertAll("Verify the transport is constructed with the factory",
+            assertAll("Verify we can construct transports with factory",
                     () -> assertEquals("Freighter", freighter.getType(), "Transport Type"),
+                    () -> assertEquals("CruiseShip", cruiseShip.getType(), "Transport Type"),
+                    () -> assertEquals("OilTanker", oilTanker.getType(), "Transport Type"),
                     () -> assertThrows(NullPointerException.class, ()-> freighter.getLongitude(), "Factory does not set coordinates")
             );
         }
