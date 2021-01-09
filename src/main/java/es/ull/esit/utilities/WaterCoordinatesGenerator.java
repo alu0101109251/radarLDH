@@ -36,7 +36,7 @@ public class WaterCoordinatesGenerator {
      */
     public static Point2D[] getOceanCoordinates() {
         try {
-            String pathname = "./src/main/java/es/ull/esit/utilities/ocean.json";
+            String pathname = "./resources/ocean.json";
 
             String fromFile = FileUtils.readFileToString(new File(pathname), StandardCharsets.UTF_8);
             JSONArray coordinates = new JSONArray(fromFile);

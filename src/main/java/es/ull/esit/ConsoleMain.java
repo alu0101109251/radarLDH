@@ -38,7 +38,7 @@ public class ConsoleMain {
         generateRandomTransports(new OilTankerFactory());
 
         // Storing initial coordinates in CSV
-        String fileName = "./src/main/java/es/ull/esit/utilities/transports.csv";
+        String fileName = "./resources/transportsInput.csv";
         CsvGenerator.generateCsvFile(fileName, transports);
 
 
@@ -65,7 +65,7 @@ public class ConsoleMain {
         }
 
         // Storing final coordinates in CSV
-        String fileName1 = "./src/main/java/es/ull/esit/utilities/transports1.csv";
+        String fileName1 = "./resources/transportsOutput.csv";
         CsvGenerator.generateCsvFile(fileName1, transports);
     }
 }
