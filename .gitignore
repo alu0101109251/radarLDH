@@ -12,8 +12,7 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
-*.war
+#*.jar*.war
 *.nar
 *.ear
 *.zip
@@ -56,7 +55,8 @@ docs/
 # When using Gradle or Maven with auto-import, you should exclude module files,
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
-# .idea/artifacts
+.idea/artifacts
+.idea/encodings.xml
 # .idea/compiler.xml
 # .idea/jarRepositories.xml
 # .idea/modules.xml
@@ -75,7 +75,7 @@ cmake-build-*/
 *.iws
 
 # IntelliJ
-out/
+#out/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/

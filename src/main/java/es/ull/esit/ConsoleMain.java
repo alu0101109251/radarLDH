@@ -73,7 +73,7 @@ public class ConsoleMain {
         generateRandomTransports(new OilTankerFactory());
 
         // Storing initial coordinates in CSV
-        String fileName = "./resources/transportsInput.csv";
+        String fileName = "./transportsInput.csv";
         CsvGenerator.generateCsvFile(fileName, TRANSPORT_LIST);
 
         // Simulating transport tracking
@@ -99,7 +99,7 @@ public class ConsoleMain {
         }
 
         // Storing final coordinates in CSV
-        String fileName1 = "./resources/transportsOutput.csv";
+        String fileName1 = "./transportsOutput.csv";
         CsvGenerator.generateCsvFile(fileName1, TRANSPORT_LIST);
     }
 
@@ -134,7 +134,7 @@ public class ConsoleMain {
                     showShipStatus();
                     break;
                 case 5:
-                    CsvGenerator.generateCsvFile("./resources/manualOutput.csv", TRANSPORT_LIST);
+                    CsvGenerator.generateCsvFile("./manualOutput.csv", TRANSPORT_LIST);
                     break;
                 case 6:
                     TRANSPORT_LIST.clear();
