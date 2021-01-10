@@ -59,13 +59,26 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 
 1. Clone the repo
-   ```sh
+   ```shell
    git clone https://github.com/alu0101109251/radarLDH.git
    ```
 2. Open the project and let Maven download necessary dependencies. You can also run:
-   ```sh
+   ```shell
    mvn install
    ```
+
+### Building
+
+* Compiled _JAR_ files are provided in [out/artifacts](out/artifacts/) folder for each program mode.
+* You can compile it yourself using IntelliJ Idea via _Build -> Build Artifacts_. 
+* _MANIFEST_ files are located in [src/main/resources](src/main/resources).
+
+
+* You can execute the program from the _JAR_ file running:
+    ```shell
+      java -jar radarLDH.jar
+    ```
+* Or via IDE following the instructions below.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -74,14 +87,37 @@ There are 2 different main program simulations.
 
 1. [ConsoleMain](src/main/java/es/ull/esit/ConsoleMain.java): simulates ships tracking showing output in the console.
     * Open the Project and run ConsoleMain configuration.
-    * You will start seeing the current location of different types of maritime transports, which is updated automatically.
-    * If you desired more transports per type, just edit ``N_TRANSPORT`` constant.
-    * Output should be as follows:
+    * Select manual or automatic simulation:
         ```shell
-        Transport{type='CruiseShip', currentLocation=Point2D.Double[21.556180975655383, -95.94505098870872]}
-        Transport{type='Freighter', currentLocation=Point2D.Double[34.61287103576895, 141.16457334944732]}
-        Transport{type='OilTanker', currentLocation=Point2D.Double[-2.89591353110801, -34.85555343154154]}
+        Welcome
+        ----------------------
+        (1) Automatic Mode
+        (2) Manual Mode
+        (3) End
+        ----------------------
+        Please enter a number:
         ```
+        * On the manual mode, you can create, edit, show and save ship tracking information (enter coordinates using comma as decimal separator):
+            ````shell
+            Manual Mode
+            ----------------------
+            (1) Create Ship
+            (2) Kill Ship
+            (3) Update Ship Position
+            (4) See Position Status
+            (5) Save Current Data to CSV
+            (6) End
+            ----------------------
+            Select desired operation:
+            ````
+        * On the automatic mode, you will start seeing the current location of different types of maritime transports, which is updated automatically.
+            * If you desired more transports per type, just edit ``N_TRANSPORT`` constant.
+            * Output should be as follows:
+                ```shell
+                Transport{type='CruiseShip', currentLocation=Point2D.Double[21.556180975655383, -95.94505098870872]}
+                Transport{type='Freighter', currentLocation=Point2D.Double[34.61287103576895, 141.16457334944732]}
+                Transport{type='OilTanker', currentLocation=Point2D.Double[-2.89591353110801, -34.85555343154154]}
+                ```
     
 2. [GeoMap](src/main/java/es/ull/esit/GeoMap.java): simulates ship tracking showing output in a geographical map.
     * Open the Project and run GeoMap configuration.
@@ -89,6 +125,7 @@ There are 2 different main program simulations.
     * If you desired more transports per type, just edit ``N_TRANSPORT`` constant.
     * Output should be as follows:
       ![GeoMap Demo](resources/demo.PNG)
+      
 
 _For more examples, please refer to the [Documentation](https://alu0101109251.github.io/radarLDH/)_
 
