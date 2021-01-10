@@ -12,7 +12,8 @@
 .mtj.tmp/
 
 # Package Files #
-#*.jar*.war
+#*.jar
+*.war
 *.nar
 *.ear
 *.zip
@@ -57,11 +58,11 @@ docs/
 # auto-import.
 .idea/artifacts
 .idea/encodings.xml
-# .idea/compiler.xml
-# .idea/jarRepositories.xml
-# .idea/modules.xml
-# .idea/*.iml
-# .idea/modules
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/modules.xml
+.idea/*.iml
+.idea/modules
 # *.iml
 # *.ipr
 
